@@ -1,0 +1,69 @@
+.container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 24px 0 
+}
+
+.background {
+  background-color: #d87d4a;
+  background-image: url("./assets/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: -115px -110px;
+  background-size: 170%;
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.imgSpeaker {
+  width: 50%;
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  margin-left: -81px;
+}
+
+.text {
+  position: absolute;
+  top: 345px;
+  text-align: center;
+  left: 0;
+  width: 100%;
+}
+
+.title {
+  width: 50%;
+  font-size: 36px;
+  color: white;
+  letter-spacing: 1.29px;
+  line-height: 40px;
+  margin: 0 auto;
+}
+
+.description {
+  width: 85.65%;
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 15px;
+  font-weight: 200;
+  text-transform: none;
+  margin: 0 auto;
+  line-height: 25px;
+  padding-top: 24px;
+}
+
+.btn {
+  width: 160px;
+  height: 48px;
+  margin: 20px 25%;
+  background-color: black;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
