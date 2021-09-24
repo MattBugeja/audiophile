@@ -1,0 +1,15 @@
+.header {
+    width: 100%;
+    height: 192px;
+    background-color: black;
+  }
+
+  .categoryName {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 35% 0 0 0 ;
+    background-color: black;
+  }

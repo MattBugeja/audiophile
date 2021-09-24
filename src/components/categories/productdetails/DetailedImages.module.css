@@ -1,0 +1,20 @@
+.imageHalfContainer{
+
+height: 174px;
+border-radius: 10px;
+overflow: hidden;
+margin-bottom: 24px;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+}
+
+.imageFullContainer{
+
+    height: 368px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    }

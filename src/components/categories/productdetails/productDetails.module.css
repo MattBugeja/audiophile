@@ -1,0 +1,47 @@
+.quantity {
+  color: #d87d4a;
+  padding-right: 15px;
+}
+
+.whatsIncluded {
+  text-transform: none;
+  list-style: none;
+  color: hsla(0, 0%, 0%, 0.5);
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 25px;
+}
+
+.productDetailsSection {
+  padding: 0 24px;
+}
+
+.features {
+  margin: 48px 0;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 36px;
+  letter-spacing: 0.86px;
+  margin: 48px 0 24px 0;
+}
+
+.text {
+  font-size: 15px;
+
+  font-weight: 200;
+  line-height: 25px;
+  text-transform: none;
+  color: hsla(0, 0%, 0%, 0.5);
+}
+
+.title2{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 36px;
+    letter-spacing: 0.86px;
+    margin: 78px 0 24px 0;
+    text-align: center;
+  }

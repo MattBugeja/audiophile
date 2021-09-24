@@ -1,23 +1,31 @@
 import classes from "./Categories.module.css"
 import { useState } from "react"
 
+
+
+
 function Categories(props){
 
     const [isNewProduct, setIsNewProduct] = useState(props.isNewProduct)
 
 return(
 
-      <div className={classes.component}>
+      <div className={classes.category}>
 
-        <header>{props.categoryName}</header>
+                   
+          
+
+            <div className={classes.imgContainer}><img className={classes.image} src = {window.location.origin + `${props.image}`}/></div>
         
-        <img src ={props.image}/>
+        
 
-        {isNewProduct}  && <div className = {classes.NewProduct}>
+        {isNewProduct  && <div className = {classes.newProduct}>
             new product
-        </div>
+        </div>}
 
-        <h1>{props.productName}</h1>
+        <div className={classes.textContainer}>
+
+        <h1 className={classes.productName}>{props.productName}</h1>
 
         <p className = {classes.text}>
             
@@ -27,8 +35,8 @@ return(
 
         <button className={classes.btn}>see product</button>
 
-
-    </div>
+        </div>
+        </div>
 
 
 
