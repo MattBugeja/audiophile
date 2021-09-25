@@ -21,6 +21,9 @@
   color: white;
   font-weight: bold;
   border: none;
+  text-decoration: none;
+  padding: 20px 40px;
+
 }
 
 .productName {

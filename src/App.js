@@ -11,15 +11,40 @@ import Landing from "./components/home/landing/Landing";
 import SplitAd from "./components/home/splitAd/SplitAd";
 import Menu from "./components/menu/Menu";
 import { ScrollToTop } from "react-router-scroll-to-top";
+import OrderContext from "./components/OrderContext";
+import { useState } from "react";
+
+
+
 
 function App() {
+
+  const [order, setOrder] = useState({ 
+  
+  0 : 0,
+   
+   1 : 0,
+   
+   2: 0,
+   
+   3:0,
+   
+   4:0,
+   
+   5:0,
+   })
+  
+
+
   return (
     <div className="App">
       <Router>
         <ScrollToTop>
           <Switch>
             <Route path="/categories/productdetails/">
+              <OrderContext.Provider value = {[order,setOrder]}>
               <ProductDetails />
+              </OrderContext.Provider>
             </Route>
 
             <Route path="/categories/CategoriesListed">

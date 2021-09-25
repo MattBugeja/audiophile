@@ -6,16 +6,60 @@ import { useState } from "react";
 import DetailedImages from "./DetailedImages";
 import Others from "./Others";
 import { useLocation } from "react-router";
+import { useContext } from "react";
+import OrderContext from "../../OrderContext";
+
+
+
 
 
 function ProductDetails(props) {
+
+const [order,setOrder] = useContext(OrderContext)
 
 const location= useLocation()
 
 const {id} = location.state
 
+const [counter, setCounter] = useState(0)
 
-  const [productID, setProductID] = useState(id);
+// const [orderAmount, setOrderAmount] = useState({ 
+  
+//  0 : 0,
+
+// 1 : 0,
+
+// 2: 0,
+
+// 3:0,
+
+// 4:0,
+
+// 5:0,
+// })
+
+const [productID, setProductID] = useState(id);
+
+function moveUp(){
+  setCounter(counter + 1)
+
+}
+
+function updateOrderAmt(){
+
+
+  setOrder((prevState,) => ({ ...prevState, [productID]  : counter }))
+
+  // setOrderAmount(productID)
+
+  console.log(order)
+
+
+}
+
+
+
+
 
   return (
     <div>
@@ -29,7 +73,12 @@ const {id} = location.state
       <div className={classes.productDetailsSection}>
         <p>$ {data[productID].price}</p>
 
-        <div>num and add to cart</div>
+        <div className={classes.orderRow}>
+
+          <button className = {classes.signButton}>-</button><textarea className={classes.amount} readOnly value = {counter}></textarea><button onClick ={moveUp} className = {classes.signButton}>+</button> <button className={classes.addToCart} onClick ={updateOrderAmt}>Add to Cart</button>
+          
+          
+        </div>
 
         <div className={classes.features}>
           <h1 className={classes.title}>features</h1>
