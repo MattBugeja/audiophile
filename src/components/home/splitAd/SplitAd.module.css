@@ -39,6 +39,9 @@
   color: black;
   font-weight: bold;
   border: 1px solid black;
+  text-align: center;
+  padding-top:15px;
+  text-decoration: none;
 }
 
 .imgContainer {
@@ -91,4 +94,8 @@
   color: black;
   font-weight: bold;
   border: 1px solid black;
+  padding:15px 30px;
+  text-decoration: none;
 }
+
+

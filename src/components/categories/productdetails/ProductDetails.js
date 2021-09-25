@@ -15,7 +15,7 @@ const location= useLocation()
 const {id} = location.state
 
 
-  const [productID, setProductID] = useState(3);
+  const [productID, setProductID] = useState(id);
 
   return (
     <div>
@@ -63,8 +63,8 @@ const {id} = location.state
 
       <h1 className={classes.title2}>You may also like</h1>
 
-      {data[productID].others.map((other) => (
-        <Others image={other.image.mobile} productName={other.name} />
+      {data[productID].others.map((other,index) => (
+        <Others key = {index} image={other.image.mobile} productName={other.name} id={other.id}/>
       ))}
     </div>
   );

@@ -1,7 +1,8 @@
 import classes from "./fullAd.module.css"
 import ImgSpeaker from "./assets/ImgSpeaker.png"
+import { Link } from "react-router-dom"
 
-function FullAd(){
+function FullAd(props){
 
     return(
 
@@ -20,7 +21,7 @@ function FullAd(){
             <h1 className={classes.title}>zx9 speaker</h1>
             <p className = {classes.description}>Upgrade to premium speaker that are phenomenally built to deliver truly remarkable sound.</p>
 
-            <button className = {classes.btn}> see product</button>
+            <Link to = {{pathname:"./categories/productdetails/ProductDetails", state:{id:5}}} className = {classes.btn}> see product</Link>
         </div>
         
         

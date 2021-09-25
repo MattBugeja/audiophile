@@ -16,7 +16,6 @@ function Landing() {
           to={{pathname:"./categories/productdetails/ProductDetails", state:{id:3}}}
           className={classes.btn}
 
-        //   src/components/categories/productdetails/ProductDetails.js
         >
           see product
         </Link>

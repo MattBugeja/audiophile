@@ -1,5 +1,5 @@
 import classes from "./Others.module.css"
-
+import { Link } from "react-router-dom"
 
 function Others(props){
 
@@ -11,7 +11,8 @@ return(
 
         <h1 className = {classes.productName}>{props.productName}</h1>
 
-        <button className={classes.btn}>see product</button>
+               <Link to = {{pathname:"/categories/productdetails/ProductDetails", state:{id:props.id}}} onClick={() => window.location.reload()} className={classes.btn}>see product</Link>
+
 
    
     </div>

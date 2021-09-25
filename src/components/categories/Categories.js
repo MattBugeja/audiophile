@@ -1,5 +1,6 @@
 import classes from "./Categories.module.css"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 
 
@@ -33,7 +34,7 @@ return(
                     
         </p>
 
-        <button className={classes.btn}>see product</button>
+        {/* <Link to = {{pathname:"/categories/productdetails/ProductDetails", state:{id:props.id}}}   className={classes.btn}>see product</Link> */}
 
         </div>
         </div>

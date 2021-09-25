@@ -3,6 +3,7 @@ import Logo from "./assets/logo.svg";
 import FacebookIcon from "./assets/icon-facebook.svg"
 import InstagramIcon from "./assets/icon-instagram.svg"
 import TwitterIcon from "./assets/icon-twitter.svg"
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -16,16 +17,16 @@ function Footer() {
         <nav>
           <ul>
             <li>
-              home
+           <Link to ={"/"} className={classes.menuOption}>Home</Link>
             </li>
             <li>
-              headphones
+            <Link to={{pathname:"/categories/CategoriesListed", state:{id:"headphones"}}} className={classes.menuOption} >headphones</Link>
             </li>
             <li>
-              speakers
+            <Link to={{pathname:"/categories/CategoriesListed", state:{id:"speakers"}}} className={classes.menuOption} >speakers</Link>
             </li>
             <li>
-              earphones
+            <Link to={{pathname:"/categories/CategoriesListed", state:{id:"earphones"}}} className={classes.menuOption} >earphones</Link>
             </li>
           </ul>
         </nav>

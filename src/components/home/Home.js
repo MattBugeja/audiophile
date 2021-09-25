@@ -15,11 +15,11 @@ function Home(){
 
 
         <Landing/> 
-       <Menu/>
+    
       <FullAd/>
       <SplitAd/>
-      <BestGear/>
-      <Footer/> 
+   
+     
 
 
 
