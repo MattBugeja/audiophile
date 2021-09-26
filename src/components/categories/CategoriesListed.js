@@ -1,5 +1,5 @@
 import classes from "./CategoriesListed.module.css";
-import data from "./data.json";
+import data from "../../data.json"
 import { useEffect, useState } from "react";
 import Categories from "./Categories";
 import { useLocation } from "react-router";

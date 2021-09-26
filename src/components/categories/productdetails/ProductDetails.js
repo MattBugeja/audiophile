@@ -1,65 +1,65 @@
 import Categories from "../Categories";
 import classes from "./productDetails.module.css";
-import data from "../data.json";
+import data from "./../../../data.json";
 import { useState } from "react";
 
 import DetailedImages from "./DetailedImages";
 import Others from "./Others";
 import { useLocation } from "react-router";
-import { useContext } from "react";
-import OrderContext from "../../OrderContext";
-
-
-
 
 
 function ProductDetails(props) {
 
-const [order,setOrder] = useContext(OrderContext)
+  const orderAmt = {
 
-const location= useLocation()
+    "YX1 Wireless Earphones" :{id:0, quantity: 0},
+    "XX59 Headphones" : {id:1, quantity: 0},
+    "XX99 Mark I Headphones": {id:2, quantity: 0},
+    "XX99 Mark II Headphones" : {id:3, quantity: 0},
+    "ZX7 Speaker" : {id:4, quantity: 0},
+    "ZX9 Speaker" : {id:5, quantity: 0},
+  }
 
-const {id} = location.state
 
-const [counter, setCounter] = useState(0)
+  const location = useLocation();
 
-// const [orderAmount, setOrderAmount] = useState({ 
+  const { id } = location.state;
+
+  const [counter, setCounter] = useState(0);
+
+  const [productID, setProductID] = useState(id);
+
+  function moveUp() {
+    setCounter(counter + 1);
+  }
+
+  function moveDown() {
+
+   return (counter >= 1 ? setCounter(counter - 1) : null);
+
+  }
+
+  function updateOrderAmt() {
+
+// localStorage.clear()
+
+    
+    let orderSummary = localStorage.getItem("orderSummary")
+
+    if (orderSummary === null) 
+    {localStorage.setItem("orderSummary", JSON.stringify(orderAmt));
+    orderSummary = localStorage.getItem("orderSummary")}
+
+
+    orderSummary = JSON.parse(orderSummary)
+
+    orderSummary[[data[productID].name]].quantity = counter
+
+    localStorage.setItem("orderSummary", JSON.stringify(orderSummary))
+
+    console.log(localStorage.getItem("orderSummary")) }
+
   
-//  0 : 0,
-
-// 1 : 0,
-
-// 2: 0,
-
-// 3:0,
-
-// 4:0,
-
-// 5:0,
-// })
-
-const [productID, setProductID] = useState(id);
-
-function moveUp(){
-  setCounter(counter + 1)
-
-}
-
-function updateOrderAmt(){
-
-
-  setOrder((prevState,) => ({ ...prevState, [productID]  : counter }))
-
-  // setOrderAmount(productID)
-
-  console.log(order)
-
-
-}
-
-
-
-
 
   return (
     <div>
@@ -74,10 +74,18 @@ function updateOrderAmt(){
         <p>$ {data[productID].price}</p>
 
         <div className={classes.orderRow}>
-
-          <button className = {classes.signButton}>-</button><textarea className={classes.amount} readOnly value = {counter}></textarea><button onClick ={moveUp} className = {classes.signButton}>+</button> <button className={classes.addToCart} onClick ={updateOrderAmt}>Add to Cart</button>
-          
-          
+          <button className={classes.signButton} onClick={moveDown}>-</button>
+          <textarea
+            className={classes.amount}
+            readOnly
+            value={counter}
+          ></textarea>
+          <button onClick={moveUp} className={classes.signButton}>
+            +
+          </button>{" "}
+          <button className={classes.addToCart} onClick={updateOrderAmt}>
+            Add to Cart
+          </button>
         </div>
 
         <div className={classes.features}>
@@ -112,8 +120,13 @@ function updateOrderAmt(){
 
       <h1 className={classes.title2}>You may also like</h1>
 
-      {data[productID].others.map((other,index) => (
-        <Others key = {index} image={other.image.mobile} productName={other.name} id={other.id}/>
+      {data[productID].others.map((other, index) => (
+        <Others
+          key={index}
+          image={other.image.mobile}
+          productName={other.name}
+          id={other.id}
+        />
       ))}
     </div>
   );
