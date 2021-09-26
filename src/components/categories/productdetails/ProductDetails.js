@@ -12,12 +12,12 @@ function ProductDetails(props) {
 
   const orderAmt = {
 
-    "YX1 Wireless Earphones" :{id:0, quantity: 0},
-    "XX59 Headphones" : {id:1, quantity: 0},
-    "XX99 Mark I Headphones": {id:2, quantity: 0},
-    "XX99 Mark II Headphones" : {id:3, quantity: 0},
-    "ZX7 Speaker" : {id:4, quantity: 0},
-    "ZX9 Speaker" : {id:5, quantity: 0},
+    // "YX1 Wireless Earphones" :{id:0, quantity: 0},
+    // "XX59 Headphones" : {id:1, quantity: 0},
+    // "XX99 Mark I Headphones": {id:2, quantity: 0},
+    // "XX99 Mark II Headphones" : {id:3, quantity: 0},
+    // "ZX7 Speaker" : {id:4, quantity: 0},
+    // "ZX9 Speaker" : {id:5, quantity: 0},
   }
 
 
@@ -53,13 +53,14 @@ function ProductDetails(props) {
 
     orderSummary = JSON.parse(orderSummary)
 
-    orderSummary[[data[productID].name]].quantity = counter
+   orderSummary[[data[productID].name]] = { id: productID, image:data[productID].cartImage, cartName: data[productID].cartName,price : data[productID].price, quantity : counter }
 
     localStorage.setItem("orderSummary", JSON.stringify(orderSummary))
 
-    console.log(localStorage.getItem("orderSummary")) }
+    // console.log(localStorage.getItem("orderSummary")) 
+  }
 
-  
+  // localStorage.clear()
 
   return (
     <div>

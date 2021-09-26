@@ -12,6 +12,7 @@ import SplitAd from "./components/home/splitAd/SplitAd";
 import Menu from "./components/menu/Menu";
 import { ScrollToTop } from "react-router-scroll-to-top";
 import { useState } from "react";
+import Cart from "./components/cart/Cart";
 
 
 
@@ -20,12 +21,17 @@ function App() {
 
    return (
     <div className="App">
+  <Cart/>
+
+
       <Router>
         <ScrollToTop>
           <Switch>
             <Route path="/categories/productdetails/">
           
               <ProductDetails />
+            
+             
          
             </Route>
 
