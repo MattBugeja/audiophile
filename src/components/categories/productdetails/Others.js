@@ -7,7 +7,7 @@ return(
 
     <div>
 
-        <div className={classes.imageContainer}><img className={classes.image} src ={props.image}/></div>
+        <div className={classes.imageContainer}><img className={classes.image} src ={props.image} alt={""}/></div>
 
         <h1 className = {classes.productName}>{props.productName}</h1>
 

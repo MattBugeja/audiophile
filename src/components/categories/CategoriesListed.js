@@ -10,7 +10,7 @@ function CategoriesListed(props) {
 
   const { id } = location.state;
 
-  const [category, setCategory] = useState(id);
+  const [category] = useState(id);
 
   const [dataToDisplay, setDataToDisplay] = useState([]);
 
@@ -48,7 +48,7 @@ function CategoriesListed(props) {
           />
 
           <Link
-            key={data.index}
+            key={index}
             to={{
               pathname: "/categories/productdetails/ProductDetails",
               state: { id: data.id },

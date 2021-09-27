@@ -1,55 +1,67 @@
 import classes from "./Cart.module.css";
 import { useState, useEffect } from "react";
-// import {useEffect} from "react"
+import CartItemsListed from "./CartItemsListed";
+import { Link } from "react-router-dom";
 
 function Cart() {
   const getOrderSummary = localStorage.getItem("orderSummary");
-  const orderSummary = JSON.parse(getOrderSummary);
+  let orderSummary = "";
+  const [cartIsEmpty, setCartIsEmpty] = useState(false);
 
-  const [counter, setCounter] = useState();
+  if (getOrderSummary !== null) {
+    orderSummary = JSON.parse(getOrderSummary);
+  }
 
-  const productName = Object.keys(orderSummary)
+  const [change, setChange] = useState(0);
+  const [total, setTotal] = useState(0);
+  const [numOfItems, setNumOfItems] = useState(0);
 
-  console.log(orderSummary[productName[0]]["quantity"])
+  function detectChange() {
+    setChange(change + 1);
+  }
 
- 
+  useEffect(() => {
+    try {
+      setTotal(0);
+      Object.keys(orderSummary).map((name) =>
+        setTotal(
+          (total) =>
+            total + orderSummary[name].price * orderSummary[name].quantity
+        )
+      );
+      setNumOfItems(Object.keys(orderSummary).length);
+    } catch (TypeError) {
+      setTotal(0);
+      setNumOfItems(0);
+    }
+  }, [change]);
 
- const quantities =  productName.map((item) => (orderSummary[productName[productName.indexOf(item)]]["quantity"]))
+  function removeAll() {
+    setCartIsEmpty(true);
+    localStorage.clear();
+    detectChange();
+  }
 
-//  console.log(test)
 
   return (
-    <div className={classes.cartContainer}>
-      <div className={classes.firstRow}>
-        <h1 className={classes.cart}>
-          cart ({Object.keys(orderSummary).length})
-        </h1>
-        <button>Remove all</button>
-      </div>
-      {Object.keys(orderSummary).map((item, index) => (
-
-          
-
-
-        <div key={index} className={classes.itemRow}>
-          <div className={classes.imageContainer}>
-            <img
-              className={classes.itemImage}
-              src={orderSummary[item]["image"]}
-            />
-          </div>
-          <div className={classes.itemPrice}>
-            <h1 className={classes.itemName}>
-              {orderSummary[item]["cartName"]}
-            </h1>
-            <p>{orderSummary[item]["price"]}</p>
-          </div>
-
-     
-
-          <div className={classes.counter}>{quantities[index]}</div>
+    <div>
+      <div className={classes.cartContainer}>
+        <div className={classes.firstRow}>
+          <h1 className={classes.cart}>cart ({numOfItems})</h1>
+          <button onClick={removeAll}>Remove all</button>
         </div>
-      ))}
+
+        {!cartIsEmpty && (
+          <CartItemsListed
+            orderSummary={orderSummary}
+            change={detectChange}
+            total={total}
+            isSummary={false}
+          />
+        )}
+
+<Link to={{pathname:"/checkout/Checkout"}} className= {classes.btn}>Checkout</Link>       
+      </div>
     </div>
   );
 }

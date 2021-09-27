@@ -2,69 +2,49 @@ import Categories from "../Categories";
 import classes from "./productDetails.module.css";
 import data from "./../../../data.json";
 import { useState } from "react";
-
 import DetailedImages from "./DetailedImages";
 import Others from "./Others";
 import { useLocation } from "react-router";
 
-
 function ProductDetails(props) {
-
-  const orderAmt = {
-
-    // "YX1 Wireless Earphones" :{id:0, quantity: 0},
-    // "XX59 Headphones" : {id:1, quantity: 0},
-    // "XX99 Mark I Headphones": {id:2, quantity: 0},
-    // "XX99 Mark II Headphones" : {id:3, quantity: 0},
-    // "ZX7 Speaker" : {id:4, quantity: 0},
-    // "ZX9 Speaker" : {id:5, quantity: 0},
-  }
-
-
+  const orderAmt = {};
   const location = useLocation();
-
   const { id } = location.state;
 
-  const [counter, setCounter] = useState(0);
+  const [productID] = useState(id);
 
-  const [productID, setProductID] = useState(id);
+  const [counter, setCounter] = useState(0);
 
   function moveUp() {
     setCounter(counter + 1);
   }
 
   function moveDown() {
-
-   return (counter >= 1 ? setCounter(counter - 1) : null);
-
+    setCounter(counter - 1);
   }
 
   function updateOrderAmt() {
-
-// localStorage.clear()
-
-    
-    let orderSummary = localStorage.getItem("orderSummary")
-
-    if (orderSummary === null) 
-    {localStorage.setItem("orderSummary", JSON.stringify(orderAmt));
-    orderSummary = localStorage.getItem("orderSummary")}
-
-
-    orderSummary = JSON.parse(orderSummary)
-
-   orderSummary[[data[productID].name]] = { id: productID, image:data[productID].cartImage, cartName: data[productID].cartName,price : data[productID].price, quantity : counter }
-
-    localStorage.setItem("orderSummary", JSON.stringify(orderSummary))
-
-    // console.log(localStorage.getItem("orderSummary")) 
+    let orderSummary = localStorage.getItem("orderSummary");
+    if (orderSummary === null) {
+      localStorage.setItem("orderSummary", JSON.stringify(orderAmt));
+      orderSummary = localStorage.getItem("orderSummary");
+    }
+    orderSummary = JSON.parse(orderSummary);
+    orderSummary[[data[productID].name]] = {
+      id: productID,
+      productName: data[productID].name,
+      image: data[productID].cartImage,
+      cartName: data[productID].cartName,
+      price: data[productID].price,
+      quantity: counter,
+    };
+    localStorage.setItem("orderSummary", JSON.stringify(orderSummary));
   }
-
-  // localStorage.clear()
-
   return (
     <div>
+     
       <Categories
+
         isNewProduct={data[productID].new}
         categoryName={data[productID].category}
         image={data[productID].categoryImage.mobile}
@@ -75,13 +55,21 @@ function ProductDetails(props) {
         <p>$ {data[productID].price}</p>
 
         <div className={classes.orderRow}>
-          <button className={classes.signButton} onClick={moveDown}>-</button>
+          <button
+            className={classes.signButton}
+            onClick={() => moveDown()}
+          >
+            -
+          </button>
           <textarea
             className={classes.amount}
             readOnly
             value={counter}
           ></textarea>
-          <button onClick={moveUp} className={classes.signButton}>
+          <button
+            onClick={() => moveUp()}
+            className={classes.signButton}
+          >
             +
           </button>{" "}
           <button className={classes.addToCart} onClick={updateOrderAmt}>

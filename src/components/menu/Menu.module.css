@@ -1,4 +1,10 @@
-
+.container{
+    background-color: white;
+    z-index: 50;
+    position: relative;
+    top:0;
+    left:0;
+}
 
 
 

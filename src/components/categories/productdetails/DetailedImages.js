@@ -6,16 +6,16 @@ function DetailedImages(props) {
   return (
     <div>
       <div className={classes.imageHalfContainer}>
-        <img className={classes.image} src={props.image1}/>
+        <img className={classes.image} src={props.image1} alt={""}/>
        
              </div>
       <div className={classes.imageHalfContainer}>
-        <img className={classes.image} src={props.image2} />
+        <img className={classes.image} src={props.image2} alt={""} />
       </div>
 
 
       <div className={classes.imageFullContainer}>
-        <img className={classes.image} src={props.image3} />
+        <img className={classes.image} src={props.image3} alt={""} />
       </div>
 
     </div>

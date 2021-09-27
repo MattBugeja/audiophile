@@ -5,7 +5,7 @@ function BestGear() {
   return (
     <div className={classes.container}>
       <div className={classes.imgContainer}>
-        <img className={classes.bestGearImg} src={bestGearImg} />
+        <img className={classes.bestGearImg} src={bestGearImg} alt={"man listening to music"} />
       </div>
 
       <div className={classes.textContainer}>
