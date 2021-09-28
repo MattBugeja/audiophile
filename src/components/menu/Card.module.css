@@ -1,50 +1,33 @@
-
-.card{
-
-    background-color: #F1F1F1;
-    width: 90%;
-    height: 165px;
-    position: relative;
-    top:0;
-    left:0;
-    border-radius: 5px;
-    margin: 80px auto 0 auto;
+.card {
+  background-color: #f1f1f1;
+  width: 90%;
+  height: 165px;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  margin: 80px auto 0 auto;
 }
 
-.image{
-
-    width: 180px;
-    height: auto;
-    position: absolute;
-    top: -55px;
-    left:50%;
-    margin-left: -90px;
-
-
+.image {
+  width: 180px;
+  height: auto;
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  margin-left: -90px;
 }
 
-.productName{
-
-    position: absolute;
-    bottom: 30%;
-    left: 50%;
-    margin-left: -56px; 
-    font-size: 15px;
-    letter-spacing: 1.07px;
-    font-size: bold;
-
+.productName {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  margin-left: -56px;
 }
 
-.shop{
-
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 13px;
-    letter-spacing: 1px;
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    margin-left: -28px; 
-
+.shop {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  margin-left: -28px;
 }
-

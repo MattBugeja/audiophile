@@ -1,5 +1,6 @@
 import classes from "./BestGear.module.css";
 import bestGearImg from "./assets/bestGearImg.jpg";
+import typography from "../../components/typography.module.css";
 
 function BestGear() {
   return (
@@ -9,9 +10,9 @@ function BestGear() {
       </div>
 
       <div className={classes.textContainer}>
-        <h1 className={classes.title}>bringing you the <span className ={classes.best}>best</span>  audio gear</h1>
-
-        <p className={classes.text}>
+        <h2>bringing you the <span className ={typography.orange}>best</span>  audio gear</h2>
+<br/><br/>
+        <p className={`${typography.textContent} ${typography.black50}`}>
           Located at the heart of New York City, Audiophile is the premier stor
           for high end headphones, earphones, speakers, and audio accessories.
           We have a large showroom and lucury demonstartion rooms available for

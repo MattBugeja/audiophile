@@ -1,42 +1,22 @@
-.container{
-
-    margin: 120px auto;
+.container {
+  margin: 120px auto 80px auto;
+  padding: 0 24px;
 }
 
-.imgContainer{
-    width:90%;
-    margin: 0 auto;
-    border-radius: 10px;
-    overflow: hidden;
-    height: 300px;
+.imgContainer {
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 300px;
 }
 
-.bestGearImg{
-    width:100%;
-    height: 100%;
+.bestGearImg {
+  width: 100%;
+  height: 100%;
 }
 
-.textContainer{
-
-    text-align: center;
-}
-
-.best{
-    color: #D87D4A
-}
-
-.title{font-size: 28px;
-font-weight: bold;
-padding: 30px 15px}
-
-.text{
-    width: 90%;
-    padding: 15px;
-    margin: 0 auto;
-    color: rgba(0, 0, 0, 0.5);
-    text-transform: none;
-    font-size: 15px;
-    line-height: 25px;
-    font-weight: 200;
-
+.textContainer {
+  margin-top: 36px;
+  text-align: center;
+  padding: 10px;
 }

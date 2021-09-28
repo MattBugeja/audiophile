@@ -1,25 +1,27 @@
-import classes from "./Card.module.css"
-import {Link } from "react-router-dom";
+import classes from "./Card.module.css";
+import { Link } from "react-router-dom";
+import typography from "../../components/typography.module.css";
 
-function Card(props){
+function Card(props) {
+  const id = props.id;
 
-    const id = props.id
+  return (
+    <div className={classes.card}>
+      <img className={classes.image} src={props.source} />
 
-    return(   
-        
-        
-        <div className={classes.card}>
+      <h6 className={classes.productName}>{props.productName}</h6>
 
-        <img className={classes.image} src={props.source}/>
-
-        <h4 className={classes.productName}>{props.productName}</h4>
-
-        <Link to={{pathname:"/categories/CategoriesListed", state:{id:props.id}}} className= {classes.shop}>shop</Link> 
-    
-    </div>)
-
+      <Link
+        to={{
+          pathname: "/categories/CategoriesListed",
+          state: { id: props.id },
+        }}
+        className={`${typography.link} ${typography.black50} ${classes.shop}`}
+      >
+        shop
+      </Link>
+    </div>
+  );
 }
 
-export default Card
-
-// src/components/categories/CategoriesListed.js
+export default Card;

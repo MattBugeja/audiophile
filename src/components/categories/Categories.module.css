@@ -1,15 +1,11 @@
-
-
 .category {
-  padding-bottom: 48px;
+  padding: 50px 0 24px 0;
 }
-
-
 
 .imgContainer {
   width: 90%;
   height: 345px;
-  margin: 48px auto 24px auto;
+  margin: 0 auto 24px auto;
   overflow: hidden;
   border-radius: 10px;
 }

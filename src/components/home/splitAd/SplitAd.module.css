@@ -1,47 +1,16 @@
-.container {
-  height: 100%;
-  width: 100%;
-}
-
 .topAd {
-  position: relative;
-  top: 0;
-  left: 0;
   background: url("./assets/topImage.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center center;
-  height: 50vh;
-  width: 90%;
+  height: 320px;
+  width: 327px;
   margin: 0 auto;
   border-radius: 10px;
+  padding-top: 95px;
 }
 
 .productName {
-  position: absolute;
-  bottom: 50%;
-  left: 24px;
-  font-size: 28px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-.btn {
-  position: absolute;
-  bottom: 60px;
-  left: -60px;
-  width: 160px;
-  height: 48px;
-  margin: 20px 25%;
-  background-color: transparent;
-  font-size: 13px;
-  text-transform: uppercase;
-  color: black;
-  font-weight: bold;
-  border: 1px solid black;
-  text-align: center;
-  padding-top:15px;
-  text-decoration: none;
+  margin: 0 0 32px 16px;
 }
 
 .imgContainer {
@@ -62,40 +31,14 @@
 }
 
 .greyBkGround {
-  position: relative;
-  top: 0;
-  left: 0;
   height: 200px;
   width: 90%;
   background-color: #f1f1f1;
   margin: 0 auto;
   border-radius: 10px;
+  padding: 48px 24px;
 }
 
-.bottomAdText {
-  position: absolute;
-  top: 40px;
-  left: 24px;
-  font-size: 28px;
-  font-weight: bold;
-  letter-spacing: 2px;
+.linkPositioning {
+  margin: 25px 8px;
 }
-
-.bottomBtn {
-  position: absolute;
-  bottom: 20px;
-  left: -60px;
-  width: 160px;
-  height: 48px;
-  margin: 20px 25%;
-  background-color: transparent;
-  font-size: 13px;
-  text-transform: uppercase;
-  color: black;
-  font-weight: bold;
-  border: 1px solid black;
-  padding:15px 30px;
-  text-decoration: none;
-}
-
-

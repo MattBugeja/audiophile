@@ -28,7 +28,7 @@
   margin-left: -81px;
 }
 
-.text {
+.content {
   position: absolute;
   top: 345px;
   text-align: center;
@@ -36,36 +36,18 @@
   width: 100%;
 }
 
-.title {
+.productName {
   width: 50%;
-  font-size: 36px;
-  color: white;
-  letter-spacing: 1.29px;
-  line-height: 40px;
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
 .description {
   width: 85.65%;
   color: hsla(0, 0%, 100%, 0.75);
-  font-size: 15px;
-  font-weight: 200;
   text-transform: none;
   margin: 0 auto;
-  line-height: 25px;
   padding-top: 24px;
+  margin-bottom: 20px;
+  
 }
 
-.btn {
-  width: 160px;
-  height: 48px;
-  margin: 20px 25%;
-  background-color: black;
-  font-size: 13px;
-  text-transform: uppercase;
-  color: white;
-  font-weight: bold;
-  border: none;
-  padding:20px;
-  text-decoration: none;
-}

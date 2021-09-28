@@ -2,6 +2,8 @@ import classes from "./Cart.module.css";
 import { useState, useEffect } from "react";
 import CartItemsListed from "./CartItemsListed";
 import { Link } from "react-router-dom";
+import typography from "../../components/typography.module.css";
+import linkStyle from "../../components/LinkStyles.module.css";
 
 function Cart() {
   const getOrderSummary = localStorage.getItem("orderSummary");
@@ -44,10 +46,10 @@ function Cart() {
 
 
   return (
-    <div>
+    
       <div className={classes.cartContainer}>
         <div className={classes.firstRow}>
-          <h1 className={classes.cart}>cart ({numOfItems})</h1>
+          <h6>cart ({numOfItems})</h6>
           <button onClick={removeAll}>Remove all</button>
         </div>
 
@@ -59,10 +61,11 @@ function Cart() {
             isSummary={false}
           />
         )}
-
-<Link to={{pathname:"/checkout/Checkout"}} className= {classes.btn}>Checkout</Link>       
+<div className= {`${linkStyle.linkWide} ${linkStyle.orange}`}>
+<Link className={classes.linkItem} to={{pathname:"/checkout/Checkout"}}>Checkout</Link>       
+</div>
       </div>
-    </div>
+   
   );
 }
 

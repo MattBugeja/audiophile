@@ -41,7 +41,7 @@ function ProductDetails(props) {
     localStorage.setItem("orderSummary", JSON.stringify(orderSummary));
   }
   return (
-    <div>
+    <div className={classes.container}>
      
       <Categories
 

@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10.22px;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  text-transform: uppercase;
+
+}
+
+.textContent{
+  font-size: 15px;
+  font-weight: 200;
+  text-transform: none;
+  line-height: 25px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.5rem;
+  letter-spacing: 0.125rem;
+  line-height: 3.625rem;
+}
+
+h2 {
+    font-size: 2.73rem;
+    letter-spacing: 0.0938rem;
+    line-height: 2.75rem;
+  }
+
+/* h3 {
+    font-size: 2rem;
+    letter-spacing: 0.0719rem;
+    line-height: 2.25rem;
+  } */
+
+h4 {
+  font-size: 2.74rem;
+  letter-spacing: 2px;
+  /* line-height: 2.375rem; */
+}
+
+/* h5 {
+    font-size: 1.5rem;
+    letter-spacing: 0.1062rem;
+    line-height: 2.0625rem;
+  } */
+
+h6 {
+  font-size: 1.47rem;
+  letter-spacing: 1.07px;
+  line-height: 1.5rem;
+  font-weight: bold;
+}
+
+.overline {
+  font-size: 14px;
+  letter-spacing: 10px;
+  line-height: 1.1875rem;
+}
+
+/* .subTitle {
+    font-size: 0.8125rem;
+    letter-spacing: 0.0625rem;
+    line-height: 1.5625rem;
+    color: #D87D4A;
+  } */
+
+.link {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.white100 {
+  color: white;
+}
+
+.white75 {
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.white50 {
+  color: hsla(0, 0%, 100%, 0.5);
+}
+
+.black {
+  color: hsl(0, 0%, 0%);
+}
+
+.black50 {
+  color: hsla(0, 0%, 0%, 0.5);
+}
+
+.orange{
+  color: #D87D4A
+}

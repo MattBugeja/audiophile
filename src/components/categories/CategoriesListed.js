@@ -30,10 +30,7 @@ function CategoriesListed(props) {
 
   return (
     <div>
-      <header className={classes.header}>
-        {" "}
         <h1 className={classes.categoryName}>{category}</h1>
-      </header>
 
       {dataToDisplay.map((data, index) => (
         <div>

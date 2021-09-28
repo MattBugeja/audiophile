@@ -14,19 +14,10 @@ function Home(){
         <div>
 
 
-        <Landing/> 
-    
+      <Landing/> 
       <FullAd/>
       <SplitAd/>
-   
-     
-
-
-
-
-
-
-        </div>
+       </div>
 
 
 

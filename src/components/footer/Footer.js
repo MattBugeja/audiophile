@@ -4,19 +4,23 @@ import FacebookIcon from "./assets/icon-facebook.svg";
 import InstagramIcon from "./assets/icon-instagram.svg";
 import TwitterIcon from "./assets/icon-twitter.svg";
 import { Link } from "react-router-dom";
+import typography from "../../components/typography.module.css";
 
 function Footer() {
   return (
-    <div className={classes.footer}>
+    <footer className={classes.footer}>
       <hr />
       <div className={classes.logoContainer}>
         <img src={Logo} />
       </div>
 
-      <nav>
+      <nav className={`${classes.footerMenu}`}>
         <ul>
           <li>
-            <Link to={"/"} className={classes.menuOption}>
+            <Link
+              to={"/"}
+              className={`${typography.link} ${typography.white100}`}
+            >
               Home
             </Link>
           </li>
@@ -26,7 +30,7 @@ function Footer() {
                 pathname: "/categories/CategoriesListed",
                 state: { id: "headphones" },
               }}
-              className={classes.menuOption}
+              className={`${typography.link} ${typography.white100}`}
             >
               headphones
             </Link>
@@ -37,7 +41,7 @@ function Footer() {
                 pathname: "/categories/CategoriesListed",
                 state: { id: "speakers" },
               }}
-              className={classes.menuOption}
+              className={`${typography.link} ${typography.white100}`}
             >
               speakers
             </Link>
@@ -48,7 +52,7 @@ function Footer() {
                 pathname: "/categories/CategoriesListed",
                 state: { id: "earphones" },
               }}
-              className={classes.menuOption}
+              className={`${typography.link} ${typography.white100}`}
             >
               earphones
             </Link>
@@ -56,14 +60,18 @@ function Footer() {
         </ul>
       </nav>
 
-      <div className={classes.text}>
+      <div
+        className={`${typography.textContent} ${typography.white50} ${classes.text}`}
+      >
         Audiophile is an all in one stop to fulfill you audio needs. We're a
         small team of music lovers and sound specialists who are devoted to
         helping you get the most out of personal audio. Come and visit our demo
         facility - we're open 7 days a week.
       </div>
 
-      <div className={classes.copyright}>
+      <div
+        className={`${typography.textContent} ${typography.white50} ${classes.copyright}`}
+      >
         Copyright 2021. All Rights Reserved
       </div>
 
@@ -71,7 +79,7 @@ function Footer() {
         <img src={FacebookIcon} /> <img src={TwitterIcon} />{" "}
         <img src={InstagramIcon} />{" "}
       </div>
-    </div>
+    </footer>
   );
 }
 

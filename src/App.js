@@ -10,7 +10,7 @@ import CounterContext from "./components/contexts/CounterContext";
 import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home";
 import Menu from "./components/menu/Menu";
-import Nav from "./components/nav/Nav";
+import NavMenu from "./components/nav/NavMenu";
 import ProductDetails from "./components/categories/productdetails/ProductDetails";
 
 function App() {
@@ -44,7 +44,7 @@ function App() {
         <div className="App">
      
           <ScrollToTop>
-            <Nav />
+            <NavMenu />
             <Switch>
               <Route path="/checkout/Checkout">
                 <Checkout />

@@ -1,31 +1,47 @@
 import classes from "./SplitAd.module.css";
 import bottomImg from "./assets/bottomImg.jpg";
 import { Link } from "react-router-dom";
+import typography from "../../../components/typography.module.css";
+import linkStyle from "../../../components/LinkStyles.module.css";
 
 function SplitAd() {
   return (
     <div className={classes.container}>
       <div className={classes.topAd}>
-        <h1 className={classes.productName}>zx7 Speaker</h1>
+        <h4 className={classes.productName}>zx7 Speaker</h4>
 
-        <Link to = {{pathname:"./categories/productdetails/ProductDetails", state:{id:5}}} className={classes.btn}>see product</Link>
+        <div className={`${linkStyle.link} ${linkStyle.transparent} `}>
+          <Link
+            to={{
+              pathname: "./categories/productdetails/ProductDetails",
+              state: { id: 5 },
+            }}
+            className={`${typography.link} ${typography.black}`}
+          >
+            see product
+          </Link>
+        </div>
       </div>
 
       <div className={classes.bottomAd}>
         <div className={classes.imgContainer}>
           <img className={classes.bottomImg} src={bottomImg} />
-      </div>
+        </div>
 
-      
-      <div className={classes.greyBkGround}>
-
-          <h1 className={classes.bottomAdText}>yx1 earphones</h1>
-          <Link to = {{pathname:"./categories/productdetails/ProductDetails", state:{id:0}}}  className={classes.bottomBtn}>see product</Link>
-
-      </div>
-
-
-
+        <div className={classes.greyBkGround}>
+          <h4 className={classes.bottomAdText}>yx1 earphones</h4>
+          <div className={`${linkStyle.link} ${linkStyle.transparent} ${classes.linkPositioning}`}>
+            <Link
+              to={{
+                pathname: "./categories/productdetails/ProductDetails",
+                state: { id: 0 },
+              }}
+              className={`${typography.link} ${typography.black}`}
+            >
+              see product
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
