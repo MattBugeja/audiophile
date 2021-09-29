@@ -1,6 +1,9 @@
 import classes from "./CartItem.module.css";
 import { useState, useEffect } from "react";
 
+import typography from "../../components/typography.module.css";
+import linkStyle from "../../components/LinkStyles.module.css";
+
 function CartItem(props) {
   const orderSummary = props.orderSummary;
   const [counter, setCounter] = useState(orderSummary.quantity);
@@ -36,7 +39,7 @@ function CartItem(props) {
         <img className={classes.itemImage} src={orderSummary["image"]} alt={""} />
       </div>
       <div className={classes.itemPrice}>
-        <h1 className={classes.itemName}>{orderSummary["cartName"]}</h1>
+        <h1 className={`${typography.textContent} ${classes.itemName}`}>{orderSummary["cartName"]}</h1>
         <p>${orderSummary["price"]}</p>
       </div>
 

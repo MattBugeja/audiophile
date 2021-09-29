@@ -3,12 +3,9 @@
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 30px;
+  align-items: center;
 }
 
-.linkItem{
-  text-decoration: none;
-  color: white;
-}
 
 .cartContainer{
   
@@ -25,4 +22,15 @@
     width: 327px;
     z-index: 10;
  
+}
+
+.removeBtn{
+
+  border:none;
+  height: 40px;
+  background-color: transparent;
+  letter-spacing: 0;
+  text-decoration: underline;
+
+
 }

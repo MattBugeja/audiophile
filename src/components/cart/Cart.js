@@ -50,7 +50,7 @@ function Cart() {
       <div className={classes.cartContainer}>
         <div className={classes.firstRow}>
           <h6>cart ({numOfItems})</h6>
-          <button onClick={removeAll}>Remove all</button>
+          <button className = {`${typography.textContent} ${typography.black50} ${classes.removeBtn}`} onClick={removeAll}>Remove all</button>
         </div>
 
         {!cartIsEmpty && (
@@ -62,7 +62,7 @@ function Cart() {
           />
         )}
 <div className= {`${linkStyle.linkWide} ${linkStyle.orange}`}>
-<Link className={classes.linkItem} to={{pathname:"/checkout/Checkout"}}>Checkout</Link>       
+<Link className={`${typography.link} ${typography.white100}`} to={{pathname:"/checkout/Checkout"}}>Checkout</Link>       
 </div>
       </div>
    
