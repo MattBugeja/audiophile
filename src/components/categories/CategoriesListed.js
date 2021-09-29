@@ -33,7 +33,7 @@ function CategoriesListed(props) {
 
   return (
     <div>
-        <h2 className={`${typography.white100} ${classes.categoryName}`}>{category}</h2>
+        <h2 className={`${typography.white100} ${typography.alignCenter} ${classes.categoryName}`}>{category}</h2>
 
       {dataToDisplay.map((data, index) => (
         <div>

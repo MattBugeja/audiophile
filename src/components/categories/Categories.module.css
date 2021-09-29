@@ -15,46 +15,13 @@
   height: auto;
 }
 
-.newProduct {
-  color: #d87d4a;
-  font-size: 14px;
-  letter-spacing: 10px;
-  text-align: center;
-}
-
 .textContainer {
   width: 90%;
   margin: 0 auto;
-  text-align: center;
 }
 
 .productName {
-  margin-top: 48px;
-  font-size: 28px;
-  font-weight: bold;
-  /* width: fit-content; */
+  margin: 48px 0;
   padding: 0 35px;
-  text-align: center;
 }
 
-.text {
-  text-align: center;
-  font-size: 15px;
-  font-weight: 200;
-  line-height: 25px;
-  text-transform: none;
-  color: hsla(0, 0%, 0%, 0.5);
-  padding-top: 24px;
-}
-
-.btn {
-  width: 160px;
-  height: 48px;
-  margin: 20px 25%;
-  background-color: #d87d4a;
-  font-size: 13px;
-  text-transform: uppercase;
-  color: white;
-  font-weight: bold;
-  border: none;
-}

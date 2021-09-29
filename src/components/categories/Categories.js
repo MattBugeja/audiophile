@@ -1,5 +1,6 @@
 import classes from "./Categories.module.css";
 import { useState } from "react";
+import typography from "../../components/typography.module.css";
 
 function Categories(props) {
   const [isNewProduct] = useState(props.isNewProduct);
@@ -13,12 +14,12 @@ function Categories(props) {
         />
       </div>
 
-      {isNewProduct && <div className={classes.newProduct}>new product</div>}
+      {isNewProduct && <div className={`${typography.overline} ${typography.orange} ${typography.alignCenter}`}>new product</div>}
 
       <div className={classes.textContainer}>
-        <h1 className={classes.productName}>{props.productName}</h1>
+        <h2 className={` ${typography.alignCenter}  ${classes.productName}`}>{props.productName}</h2>
 
-        <p className={classes.text}>{props.text}</p>
+        <p className={`${typography.textContent} ${typography.black50}`}>{props.text}</p>
 
       </div>
     </div>

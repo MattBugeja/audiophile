@@ -20,14 +20,16 @@
 
 .productName {
   position: absolute;
+  margin: 0px auto 0 auto;
   bottom: 30%;
-  left: 50%;
-  margin-left: -56px;
+  left: 0;
+  right: 0;
 }
 
 .shop {
   position: absolute;
-  bottom: 10%;
-  left: 50%;
-  margin-left: -28px;
+  margin: 0px auto 0 auto;
+  bottom: 20%;
+  left: 0;
+  right: 0;
 }

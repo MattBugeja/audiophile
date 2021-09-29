@@ -17,13 +17,6 @@
   width: 92px;
   height: 32px;
   border: none;
-  text-align: right;
-}
-
-.orderRow {
-  margin-top: 15px;
-  display: flex;
-  flex-direction: row;
 }
 
 .imageContainer {
@@ -51,11 +44,9 @@
   font-weight: bold;
   width: 80px;
   letter-spacing: 0px;
-  text-align: left;
 }
 
 .itemPrice {
-  text-align: left;
   letter-spacing: 0;
 }
 

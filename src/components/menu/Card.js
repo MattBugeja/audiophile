@@ -6,10 +6,9 @@ function Card(props) {
   const id = props.id;
 
   return (
-    <div className={classes.card}>
-      <div className ={classes.imgContainer}>
+    <div className={`${typography.alignCenter} ${classes.card}`}>
       <img className={classes.image} src={props.source} />
-      </div>
+
 
       <h6 className={classes.productName}>{props.productName}</h6>
 

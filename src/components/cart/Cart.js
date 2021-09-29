@@ -49,8 +49,8 @@ function Cart() {
 
   return (
     
-      <div className={classes.cartContainer}>
-        <div className = {classes.closeIcon}><CloseIcon/></div>
+      <div className={`${typography.alignCenter} ${classes.cartContainer}`}>
+        <div className = {typography.alignRight}><CloseIcon/></div>
 
         <div className={classes.firstRow}>
           <h6>cart ({numOfItems})</h6>

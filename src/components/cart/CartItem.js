@@ -39,8 +39,8 @@ function CartItem(props) {
         <img className={classes.itemImage} src={orderSummary["image"]} alt={""} />
       </div>
       <div className={classes.itemPrice}>
-        <h1 className={`${typography.textContent} ${classes.itemName}`}>{orderSummary["cartName"]}</h1>
-        <p className={`${typography.overline} ${typography.black50} ${classes.itemPrice}`}>${orderSummary["price"]}</p>
+        <h1 className={`${typography.textContent} ${typography.alignLeft} ${classes.itemName}`}>{orderSummary["cartName"]}</h1>
+        <p className={`${typography.overline} ${typography.black50} ${typography.alignLeft} ${classes.itemPrice}`}>${orderSummary["price"]}</p>
       </div>
 
 
@@ -55,7 +55,7 @@ function CartItem(props) {
       </button>{" "}
       </div>}
 
-      {isSummary && <textarea className={`${typography.textContent} ${typography.black50} ${classes.summaryQuantity}`} readOnly value= {`x${counter}`}></textarea>}
+      {isSummary && <textarea className={`${typography.textContent} ${typography.alignRight} ${typography.black50} ${classes.summaryQuantity}`} readOnly value= {`x${counter}`}></textarea>}
 
 
 

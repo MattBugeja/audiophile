@@ -18,7 +18,7 @@ function FullAd(props){
 
         </div>
 
-        <div className = {classes.content}>
+        <div className = {`${typography.alignCenter} ${classes.content}`}>
 
             <h1 className={`${classes.productName} ${typography.white100}`}>zx9 speaker</h1>
             <p className = {`${classes.description} ${typography.textContent} ${typography.white75}`}>Upgrade to premium speaker that are phenomenally built to deliver truly remarkable sound.</p>

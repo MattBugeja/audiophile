@@ -62,8 +62,7 @@ h6 {
 .overline {
   font-size: 14px;
   letter-spacing: 10px;
-  line-height: 1.1875rem;
-}
+ }
 
 /* .subTitle {
     font-size: 0.8125rem;
@@ -112,4 +111,9 @@ h6 {
 
 .alignCenter{
   text-align: center;
+}
+
+.alignRight{
+
+  text-align: right;
 }

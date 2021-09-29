@@ -9,7 +9,6 @@
 
 .product {
   padding: 0 20px;
-  text-align: center;
   margin-top: 30px;
 }
 
@@ -22,12 +21,10 @@
 
 .newProduct {
   margin: 10px 0;
-  text-align: center;
 }
 
 .description {
   margin: 20px 0 70px 0;
   text-transform: none;
   width: 100%;
-  text-align: center;
 }

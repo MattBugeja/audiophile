@@ -5,7 +5,7 @@ import linkStyle from "../../../components/LinkStyles.module.css"
 function Landing() {
   return (
     <div className={classes.container}>
-      <div className={classes.content}>
+      <div className={`${typography.alignCenter} ${classes.content}`}>
         <p className={`${typography.overline} ${typography.white50} ${classes.newProduct}`} >NEW PRODUCT</p>
         <h1 className={`${classes.product} ${typography.white100}`}>XX99 MARKII HEADPHONES</h1>
         <p className={`${classes.description} ${typography.textContent} ${typography.white75}`}>

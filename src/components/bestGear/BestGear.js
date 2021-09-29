@@ -9,7 +9,7 @@ function BestGear() {
         <img className={classes.bestGearImg} src={bestGearImg} alt={"man listening to music"} />
       </div>
 
-      <div className={classes.textContainer}>
+      <div className={`${typography.alignCenter} ${classes.textContainer}`}>
         <h2>bringing you the <span className ={typography.orange}>best</span>  audio gear</h2>
 <br/><br/>
         <p className={`${typography.textContent} ${typography.black50}`}>
