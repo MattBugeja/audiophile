@@ -7,7 +7,9 @@ function Card(props) {
 
   return (
     <div className={classes.card}>
+      <div className ={classes.imgContainer}>
       <img className={classes.image} src={props.source} />
+      </div>
 
       <h6 className={classes.productName}>{props.productName}</h6>
 

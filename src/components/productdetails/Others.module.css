@@ -1,7 +1,7 @@
 .imageContainer {
   width: 90%;
   height: 120px;
-  margin: 0 auto;
+  margin: 40px auto 0 auto;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -11,27 +11,6 @@
   height: auto;
 }
 
-.btn {
-  width: 160px;
-  height: 48px;
-  margin: 0px 25% 50px 25%;
-  background-color: #d87d4a;
-  font-size: 13px;
-  text-transform: uppercase;
-  color: white;
-  font-weight: bold;
-  border: none;
-  text-decoration: none;
-  padding: 20px 40px;
-
-}
-
 .productName {
-  /* width: fit-content; */
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 36px;
-  letter-spacing: 0.86px;
   margin: 24px 0 24px 0;
-  text-align: center;
 }

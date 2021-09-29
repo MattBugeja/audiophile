@@ -5,8 +5,7 @@ import { useState } from "react";
 import DetailedImages from "./DetailedImages";
 import Others from "./Others";
 import { useLocation } from "react-router";
-// import typography from "../../components/typography.module.css";
-// import linkStyle from "../../components/LinkStyles.module.css";
+import typography from "../../components/typography.module.css";
 
 function ProductDetails(props) {
   const orderAmt = {};
@@ -44,9 +43,7 @@ function ProductDetails(props) {
   }
   return (
     <div className={classes.container}>
-     
       <Categories
-
         isNewProduct={data[productID].new}
         categoryName={data[productID].category}
         image={data[productID].categoryImage.mobile}
@@ -54,44 +51,48 @@ function ProductDetails(props) {
         text={data[productID].description}
       />
       <div className={classes.productDetailsSection}>
-        <p>$ {data[productID].price}</p>
+        <h6>$ {data[productID].price.toLocaleString()}</h6>
 
         <div className={classes.orderRow}>
-          <button
-            className={classes.signButton}
-            onClick={() => moveDown()}
-          >
+          <button className={classes.signButton} onClick={() => moveDown()}>
             -
           </button>
           <textarea
-            className={classes.amount}
+            className={classes.quantity}
             readOnly
             value={counter}
           ></textarea>
-          <button
-            onClick={() => moveUp()}
-            className={classes.signButton}
-          >
+          <button onClick={() => moveUp()} className={classes.signButton}>
             +
           </button>{" "}
-          <button className={classes.addToCart} onClick={updateOrderAmt}>
+          <button
+            className={`${typography.link} ${typography.white100} ${classes.addToCart}`}
+            onClick={updateOrderAmt}
+          >
             Add to Cart
           </button>
         </div>
 
         <div className={classes.features}>
-          <h1 className={classes.title}>features</h1>
+          <h3 className={classes.title}>features</h3>
 
-          <p className={classes.text}>{data[productID].features}</p>
+          <p
+            className={`${typography.textContent} ${typography.alignLeft} ${typography.black50} `}
+          >
+            {data[productID].features}
+          </p>
 
           <div className={classes.inTheBox}>
             <h1 className={classes.title}>in the box</h1>
 
             <ul>
               {data[productID].includes.map((included, index) => (
-                <li className={classes.whatsIncluded} key={index}>
+                <li
+                  className={`${typography.textContent} ${typography.black50} ${typography.alignLeft} ${classes.whatsIncluded} `}
+                  key={index}
+                >
                   {" "}
-                  <span className={classes.quantity}>
+                  <span className={classes.quantityInBox}>
                     {" "}
                     {included.quantity}x
                   </span>
@@ -109,7 +110,9 @@ function ProductDetails(props) {
         />
       </div>
 
-      <h1 className={classes.title2}>You may also like</h1>
+      <h3 className={` ${typography.alignCenter} ${classes.title2}`}>
+        You may also like
+      </h3>
 
       {data[productID].others.map((other, index) => (
         <Others
