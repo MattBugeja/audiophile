@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import typography from "../../components/typography.module.css";
 import linkStyle from "../../components/LinkStyles.module.css";
 
+import {ReactComponent as CloseIcon} from "./assets/closeIcon.svg"
+
 function Cart() {
   const getOrderSummary = localStorage.getItem("orderSummary");
   let orderSummary = "";
@@ -48,6 +50,8 @@ function Cart() {
   return (
     
       <div className={classes.cartContainer}>
+        <div className = {classes.closeIcon}><CloseIcon/></div>
+
         <div className={classes.firstRow}>
           <h6>cart ({numOfItems})</h6>
           <button className = {`${typography.textContent} ${typography.black50} ${classes.removeBtn}`} onClick={removeAll}>Remove all</button>

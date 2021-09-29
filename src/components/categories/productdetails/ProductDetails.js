@@ -1,10 +1,12 @@
 import Categories from "../Categories";
 import classes from "./productDetails.module.css";
-import data from "./../../../data.json";
+import data from "../../../data.json";
 import { useState } from "react";
 import DetailedImages from "./DetailedImages";
 import Others from "./Others";
 import { useLocation } from "react-router";
+// import typography from "../../components/typography.module.css";
+// import linkStyle from "../../components/LinkStyles.module.css";
 
 function ProductDetails(props) {
   const orderAmt = {};

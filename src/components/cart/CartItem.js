@@ -40,7 +40,7 @@ function CartItem(props) {
       </div>
       <div className={classes.itemPrice}>
         <h1 className={`${typography.textContent} ${classes.itemName}`}>{orderSummary["cartName"]}</h1>
-        <p>${orderSummary["price"]}</p>
+        <p className={`${typography.overline} ${typography.black50} ${classes.itemPrice}`}>${orderSummary["price"]}</p>
       </div>
 
 
@@ -55,7 +55,7 @@ function CartItem(props) {
       </button>{" "}
       </div>}
 
-      {isSummary && <textarea className={classes.summaryQuantity} readOnly value= {`x${counter}`}></textarea>}
+      {isSummary && <textarea className={`${typography.textContent} ${typography.black50} ${classes.summaryQuantity}`} readOnly value= {`x${counter}`}></textarea>}
 
 
 

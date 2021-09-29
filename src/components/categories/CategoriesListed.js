@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import Categories from "./Categories";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
+import typography from "../../components/typography.module.css";
+import linkStyle from "../../components/LinkStyles.module.css";
+
 
 function CategoriesListed(props) {
   const location = useLocation();
@@ -30,7 +33,7 @@ function CategoriesListed(props) {
 
   return (
     <div>
-        <h1 className={classes.categoryName}>{category}</h1>
+        <h2 className={`${typography.white100} ${classes.categoryName}`}>{category}</h2>
 
       {dataToDisplay.map((data, index) => (
         <div>
@@ -44,16 +47,20 @@ function CategoriesListed(props) {
             text={data.description}
           />
 
+          <div className = {`${linkStyle.link} ${linkStyle.orange}`}>
+
           <Link
             key={index}
             to={{
               pathname: "/categories/productdetails/ProductDetails",
               state: { id: data.id },
             }}
-            className={classes.btn}
+            className={`${typography.link} ${typography.white100}`}
           >
+            
             see product
           </Link>
+          </div>
         </div>
       ))}
     </div>
