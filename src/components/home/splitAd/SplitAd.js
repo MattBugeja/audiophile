@@ -1,5 +1,7 @@
 import classes from "./SplitAd.module.css";
-import bottomImg from "./assets/bottomImg.jpg";
+import ImgEarphonesMobile from "./assets/imgEarphones-mobile.jpg";
+import ImgEarphonesTablet from "./assets/imgEarphones-tablet.jpg";
+import ImgEarphonesDesktop from "./assets/imgEarphones-desktop.jpg";
 import { Link } from "react-router-dom";
 import typography from "../../../components/typography.module.css";
 import linkStyle from "../../../components/LinkStyles.module.css";
@@ -10,7 +12,7 @@ function SplitAd() {
       <div className={classes.topAd}>
         <h4 className={classes.productName}>zx7 Speaker</h4>
 
-        <div className={`${linkStyle.link} ${linkStyle.transparent} `}>
+        <div className={`${linkStyle.link} ${linkStyle.transparent} ${classes.speakerLinkPositioning}`}>
           <Link
             to={{
               pathname: "/productdetails/ProductDetails",
@@ -25,7 +27,7 @@ function SplitAd() {
 
       <div className={classes.bottomAd}>
         <div className={classes.imgContainer}>
-          <img className={classes.bottomImg} src={bottomImg} />
+          <img className={classes.bottomImg} src={ImgEarphonesMobile} srcSet = {`${ImgEarphonesMobile} 760w, ${ImgEarphonesTablet} 1280w, ${ImgEarphonesDesktop} 1500w`} alt="" />
         </div>
 
         <div className={classes.greyBkGround}>

@@ -2,51 +2,81 @@
   position: relative;
   top: 0;
   left: 0;
-  width: 90%;
-  height: 100%;
-  margin: 0 auto;
-  padding: 24px 0 
-}
-
-.background {
+  width: 327px;
+  padding: 24px 24px;
   background-color: #d87d4a;
   background-image: url("./assets/pattern-circles.svg");
   background-repeat: no-repeat;
   background-position: -115px -110px;
   background-size: 170%;
-  width: 100%;
   height: 600px;
-  margin: 0 auto;
+  margin: 0px auto;
   border-radius: 10px;
 }
 
+.imgContainer {
+  margin: 50px auto 0 auto;
+  width: 172.3px;
+  height: 207px;
+}
+
 .imgSpeaker {
-  width: 50%;
-  position: absolute;
-  top: 90px;
-  left: 50%;
-  margin-left: -81px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .content {
-  position: absolute;
-  top: 345px;
-  left: 0;
+  margin: 20px auto 0 auto;
   width: 100%;
 }
 
 .productName {
   width: 50%;
-    margin: 0 auto;
+  margin: 0 auto;
+  padding: 250px auto 0 auto;
 }
 
 .description {
-  width: 85.65%;
-  color: hsla(0, 0%, 100%, 0.75);
+  width: 280px;
   text-transform: none;
   margin: 0 auto;
   padding-top: 24px;
   margin-bottom: 20px;
-  
 }
 
+@media (min-width: 760px) {
+  .container {
+    background-image: url("./assets/pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% -250px;
+    background-size: 125%;
+    width: 689px;
+    height: 720px;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+
+  .imgContainer {
+    margin: 10px auto;
+    width: 197.5px;
+    height: 237px;
+  }
+
+  .imgSpeaker {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .productName {
+    width: 40%;
+    margin: 0 auto;
+    padding: 250px auto 0 auto;
+  }
+
+  .content {
+    margin: 60px auto 0 auto;
+  }
+}

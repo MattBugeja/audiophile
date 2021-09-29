@@ -8,13 +8,18 @@
   font-size: 10.22px;
 }
 
+@media (min-width: 760px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
 body {
   font-family: "Manrope", sans-serif;
   text-transform: uppercase;
-
 }
 
-.textContent{
+.textContent {
   font-size: 15px;
   font-weight: 200;
   text-transform: none;
@@ -28,16 +33,16 @@ h1 {
 }
 
 h2 {
-    font-size: 2.73rem;
-    letter-spacing: 0.0938rem;
-    line-height: 2.75rem;
-  }
+  font-size: 2.73rem;
+  letter-spacing: 0.0938rem;
+  line-height: 2.75rem;
+}
 
 h3 {
-    font-size: 2.35rem;
-    letter-spacing: 0.0719rem;
-    line-height: 2.25rem;
-  }
+  font-size: 2.35rem;
+  letter-spacing: 0.0719rem;
+  line-height: 2.25rem;
+}
 
 h4 {
   font-size: 2.74rem;
@@ -61,7 +66,7 @@ h6 {
 .overline {
   font-size: 14px;
   letter-spacing: 10px;
- }
+}
 
 /* .subTitle {
     font-size: 0.8125rem;
@@ -98,21 +103,18 @@ h6 {
   color: hsla(0, 0%, 0%, 0.5);
 }
 
-.orange{
-  color: #D87D4A
+.orange {
+  color: #d87d4a;
 }
 
-.alignLeft{
-
+.alignLeft {
   text-align: left;
-
 }
 
-.alignCenter{
+.alignCenter {
   text-align: center;
 }
 
-.alignRight{
-
+.alignRight {
   text-align: right;
 }
