@@ -8,10 +8,7 @@ import { ReactComponent as CartIcon } from "./assets/icon-cart.svg";
 import OverlayMenu from "../overlay/OverlayMenu";
 import classes from "./NavMenu.module.css";
 import Menu from "../menu/Menu";
-import Card from "../menu/Card";
-import earphonesImg from "../menu/assets/earphonesImg.png";
-import speakersImg from "../menu/assets/speakersImg.png";
-import headphonesImg from "../menu/assets/headphonesImg.png";
+
 import Cart from "../cart/Cart";
 function NavMenu() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);

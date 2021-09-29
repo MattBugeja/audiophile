@@ -12,6 +12,7 @@ import Home from "./components/home/Home";
 import Menu from "./components/menu/Menu";
 import NavMenu from "./components/nav/NavMenu";
 import ProductDetails from "./components/productdetails/ProductDetails";
+import Thanks from "./components/checkout/ThanksModal";
 
 function App() {
   const [xx59Counter, setXx59Counter] = useState(0);
@@ -42,6 +43,8 @@ function App() {
     <CounterContext.Provider value={[setValue, readValue]}>
       <Router>
         <div className="App">
+
+          {/* <Thanks/> */}
      
           <ScrollToTop>
             <NavMenu />
@@ -67,8 +70,8 @@ function App() {
               </Route>
             </Switch>
           </ScrollToTop>
-          <Menu />
-          <BestGear />
+          {/* <Menu /> */}
+          {/* <BestGear /> */}
           <Footer />
         </div>
       </Router>

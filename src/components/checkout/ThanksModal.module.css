@@ -1,0 +1,31 @@
+.container {
+  background-color: white;
+  border-radius: 15px;
+  height: 500px;
+  left: 50%;
+  margin: 0 auto;
+  padding: 32px;
+  position: fixed;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  width: 327px;
+  z-index: 50;
+  text-align: left;
+  overflow:scroll;
+}
+
+.text {
+  padding: 3rem 0;
+}
+
+.icon {
+  margin-bottom: 24px;
+}
+
+
+.background{
+  background-color: #F1F1F1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+

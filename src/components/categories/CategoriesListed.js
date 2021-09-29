@@ -6,6 +6,8 @@ import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import typography from "../../components/typography.module.css";
 import linkStyle from "../../components/LinkStyles.module.css";
+import Menu from "../menu/Menu";
+import BestGear from "../bestGear/BestGear";
 
 
 function CategoriesListed(props) {
@@ -61,8 +63,12 @@ function CategoriesListed(props) {
             see product
           </Link>
           </div>
+
         </div>
       ))}
+
+      <Menu/>
+      <BestGear/>
     </div>
   );
 }

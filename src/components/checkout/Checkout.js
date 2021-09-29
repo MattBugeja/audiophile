@@ -75,7 +75,7 @@ function Checkout() {
       </div>
 
       <Summary />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

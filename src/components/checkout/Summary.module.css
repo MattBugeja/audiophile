@@ -2,7 +2,7 @@
     margin: 24px 24px 72px 24px;
     background-color: white;
     border-radius: 5px;
-    padding: 24px;
+    padding: 24px 24px 64px 24px;
    
 }
 
@@ -12,3 +12,4 @@
     margin-top: 24px;
     border:0;
 }
+

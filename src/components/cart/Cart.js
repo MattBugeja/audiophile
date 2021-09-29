@@ -10,7 +10,6 @@ import {ReactComponent as CloseIcon} from "./assets/closeIcon.svg"
 function Cart() {
   const getOrderSummary = localStorage.getItem("orderSummary");
   let orderSummary = "";
-  const [cartIsEmpty, setCartIsEmpty] = useState(false);
 
   if (getOrderSummary !== null) {
     orderSummary = JSON.parse(getOrderSummary);
@@ -25,7 +24,6 @@ function Cart() {
   }
 
   useEffect(() => {
-    try {
       setTotal(0);
       Object.keys(orderSummary).map((name) =>
         setTotal(
@@ -34,15 +32,10 @@ function Cart() {
         )
       );
       setNumOfItems(Object.keys(orderSummary).length);
-    } catch (TypeError) {
-      setTotal(0);
-      setNumOfItems(0);
-    }
-  }, [change]);
+    }, [change]);
 
   function removeAll() {
-    setCartIsEmpty(true);
-    localStorage.clear();
+     localStorage.clear();
     detectChange();
   }
 
@@ -57,17 +50,19 @@ function Cart() {
           <button className = {`${typography.textContent} ${typography.black50} ${classes.removeBtn}`} onClick={removeAll}>Remove all</button>
         </div>
 
-        {!cartIsEmpty && (
+        
+   
           <CartItemsListed
             orderSummary={orderSummary}
             change={detectChange}
             total={total}
             isSummary={false}
           />
-        )}
-<div className= {`${linkStyle.linkWide} ${linkStyle.orange}`}>
-<Link className={`${typography.link} ${typography.white100}`} to={{pathname:"/checkout/Checkout"}}>Checkout</Link>       
-</div>
+       
+       {total > 0 && (<div className= {`${linkStyle.linkWide} ${linkStyle.orange}`}>
+<Link className={`${typography.link} ${typography.white100}`} to={{pathname:"/checkout/Checkout", state: {totalAmount: total}}}>Checkout</Link>       
+</div> )}
+
       </div>
    
   );

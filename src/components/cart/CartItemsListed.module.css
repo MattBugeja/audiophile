@@ -8,3 +8,15 @@
     
 
   .total{text-transform: uppercase;}
+
+  .checkedOutTotal{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  align-items: left;  
+  background-color: black;
+  padding: 24px;
+
+
+  }

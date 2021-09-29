@@ -22,7 +22,7 @@ input::placeholder {
 }
 .container {
   background-color: #f2f2f2;
-  padding-top: 24px;
+  padding: 100px 0 16px 0;
 }
 
 .paymentOptions {

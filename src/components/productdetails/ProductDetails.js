@@ -6,6 +6,8 @@ import DetailedImages from "./DetailedImages";
 import Others from "./Others";
 import { useLocation } from "react-router";
 import typography from "../../components/typography.module.css";
+import Menu from "../menu/Menu";
+import BestGear from "../bestGear/BestGear";
 
 function ProductDetails(props) {
   const orderAmt = {};
@@ -51,7 +53,7 @@ function ProductDetails(props) {
         text={data[productID].description}
       />
       <div className={classes.productDetailsSection}>
-        <h6>$ {data[productID].price.toLocaleString()}</h6>
+        <h6> &#8364; {data[productID].price.toLocaleString()}</h6>
 
         <div className={classes.orderRow}>
           <button className={classes.signButton} onClick={() => moveDown()}>
@@ -122,6 +124,8 @@ function ProductDetails(props) {
           id={other.id}
         />
       ))}
+      <Menu/>
+      <BestGear/>
     </div>
   );
 }

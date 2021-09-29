@@ -7,7 +7,7 @@ function Others(props){
 
 return(
 
-    <div>
+    <div className={classes.othersSection}>
 
         <div className={classes.imageContainer}><img className={classes.image} src ={props.image} alt={""}/></div>
 
