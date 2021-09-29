@@ -52,7 +52,7 @@ function CategoriesListed(props) {
           <Link
             key={index}
             to={{
-              pathname: "/categories/productdetails/ProductDetails",
+              pathname: "/productdetails/ProductDetails",
               state: { id: data.id },
             }}
             className={`${typography.link} ${typography.white100}`}

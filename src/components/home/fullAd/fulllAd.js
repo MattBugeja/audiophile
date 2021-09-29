@@ -24,7 +24,7 @@ function FullAd(props){
             <p className = {`${classes.description} ${typography.textContent} ${typography.white75}`}>Upgrade to premium speaker that are phenomenally built to deliver truly remarkable sound.</p>
 
             <div className ={`${linkStyle.link} ${linkStyle.black}`}>
-            <Link to = {{pathname:"./categories/productdetails/ProductDetails", state:{id:5}}} className = {`${typography.link} ${typography.white100}`}> see product</Link>
+            <Link to = {{pathname:"/productdetails/ProductDetails", state:{id:5}}} className = {`${typography.link} ${typography.white100}`}> see product</Link>
             </div>
         </div>
         

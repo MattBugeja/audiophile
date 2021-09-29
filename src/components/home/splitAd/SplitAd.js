@@ -13,7 +13,7 @@ function SplitAd() {
         <div className={`${linkStyle.link} ${linkStyle.transparent} `}>
           <Link
             to={{
-              pathname: "./categories/productdetails/ProductDetails",
+              pathname: "/productdetails/ProductDetails",
               state: { id: 5 },
             }}
             className={`${typography.link} ${typography.black}`}
@@ -33,7 +33,7 @@ function SplitAd() {
           <div className={`${linkStyle.link} ${linkStyle.transparent} ${classes.linkPositioning}`}>
             <Link
               to={{
-                pathname: "./categories/productdetails/ProductDetails",
+                pathname: "/productdetails/ProductDetails",
                 state: { id: 0 },
               }}
               className={`${typography.link} ${typography.black}`}

@@ -11,7 +11,7 @@ import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home";
 import Menu from "./components/menu/Menu";
 import NavMenu from "./components/nav/NavMenu";
-import ProductDetails from "./components/categories/productdetails/ProductDetails";
+import ProductDetails from "./components/productdetails/ProductDetails";
 
 function App() {
   const [xx59Counter, setXx59Counter] = useState(0);
@@ -54,7 +54,7 @@ function App() {
                 <Cart />
               </Route>
 
-              <Route path="/categories/productdetails/">
+              <Route path="/productdetails/">
                 <ProductDetails />
               </Route>
 

@@ -17,7 +17,7 @@ function Landing() {
 
         <div className={`${linkStyle.link} ${linkStyle.orange}` }>
         <Link
-          to={{pathname:"./categories/productdetails/ProductDetails", state:{id:3}}}
+          to={{pathname:"/productdetails/ProductDetails", state:{id:3}}}
           className={`${typography.link} ${typography.white100}`}
 
         >

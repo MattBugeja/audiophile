@@ -11,7 +11,7 @@ return(
 
         <h1 className = {classes.productName}>{props.productName}</h1>
 
-               <Link to = {{pathname:"/categories/productdetails/ProductDetails", state:{id:props.id}}} onClick={() => window.location.reload()} className={classes.btn}>see product</Link>
+               <Link to = {{pathname:"/productdetails/ProductDetails", state:{id:props.id}}} onClick={() => window.location.reload()} className={classes.btn}>see product</Link>
 
 
    

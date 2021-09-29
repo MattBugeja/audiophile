@@ -1,6 +1,6 @@
-import Categories from "../Categories";
+import Categories from "../categories/Categories";
 import classes from "./productDetails.module.css";
-import data from "../../../data.json";
+import data from "../../data.json";
 import { useState } from "react";
 import DetailedImages from "./DetailedImages";
 import Others from "./Others";
