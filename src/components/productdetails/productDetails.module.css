@@ -22,50 +22,38 @@
 
 .title {
   margin: 24px 0;
+  width: 50%;
 }
 
 .title2 {
   margin: 78px 0 24px 0;
 }
 
-.signButton {
-  width: 40px;
-  height: 50px;
-  border: none;
+@media (min-width: 760px) {
+
+  .title {
+    margin: 0;
+    /* width: 50%; */
+  }
+  .inTheBox {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: start;
+    align-items: flex-start;
+    margin-top: 60px;
+  }
+
+  .inTheBox ul {
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+  }
 }
 
-.orderRow {
-  margin-top: 15px;
+.others{
   display: flex;
   flex-direction: row;
-  justify-content: start;
-  /* padding-left: 36px; */
-}
-
-.addToCart {
-  border: none;
-  margin-left: 20px;
-  width: 160px;
-  height: 48px;
-  background-color: #d87d4a;
-}
-
-.signButton {
-  width: 33px;
-  height: 48px;
-  border: none;
-}
-
-.quantity {
-  width: 33px;
-  height: 48px;
-  border: none;
-  background-color: #f1f1f1;
-  padding-top: 15px;
-  text-align: center;
-}
-
-.adjustQuantity {
-  display: flex;
-  flex-direction: row;
+  padding: 0 24px;
+  column-gap: 24px;
 }

@@ -1,5 +1,4 @@
 .imageHalfContainer{
-
 height: 174px;
 border-radius: 10px;
 overflow: hidden;
@@ -12,9 +11,41 @@ margin-bottom: 24px;
 }
 
 .imageFullContainer{
-
     height: 368px;
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 24px;
     }
+
+
+
+@media(min-width: 760px){
+
+    .container{
+        display: flex;
+        flex-direction: row;
+        column-gap: 24px;
+    }
+
+    .imageHalfContainer{
+        height: 174px;
+        width: 274px;
+           }
+
+
+        .imageFullContainer{
+            height: 368px;
+           width: 395px;
+            }
+
+
+
+    .halfImages{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+
+}

@@ -21,3 +21,26 @@
 
 
 }
+
+@media(min-width: 760px){
+
+  .othersSection{
+
+    width: 223px;
+    height: 471px;
+
+    /* padding-bottom: 48px; */
+  
+  
+  }
+
+  .imageContainer {
+    width: 223px;
+    height: auto;
+    margin: 40px auto 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+
+}

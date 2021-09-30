@@ -11,7 +11,7 @@ return(
 
         <div className={classes.imageContainer}><img className={classes.image} src ={props.image} alt={""}/></div>
 
-        <h3 className = {`${typography.alignCenter} ${classes.productName}`}>{props.productName}</h3>
+        <h5 className = {`${typography.alignCenter} ${classes.productName}`}>{props.productName}</h5>
 
         <div className = {`${linkStyle.link} ${linkStyle.orange} `}>
 

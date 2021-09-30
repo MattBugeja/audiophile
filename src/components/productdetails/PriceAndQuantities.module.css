@@ -1,0 +1,44 @@
+.orderRow {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  .adjustQuantity {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .signButton {
+    width: 33px;
+    height: 48px;
+    border: none;
+  }
+
+
+.addToCart {
+    border: none;
+    margin-left: 20px;
+    width: 160px;
+    height: 48px;
+    background-color: #d87d4a;
+  }
+
+  .quantity {
+    width: 33px;
+    height: 48px;
+    border: none;
+    background-color: #f1f1f1;
+    padding-top: 15px;
+    text-align: center;
+  }
+
+  .container{
+
+    padding: 0 24px;
+    text-align: left;
+
+
+
+  }

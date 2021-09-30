@@ -8,7 +8,7 @@ import typography from "../../components/typography.module.css";
 import linkStyle from "../../components/LinkStyles.module.css";
 import Menu from "../menu/Menu";
 import BestGear from "../bestGear/BestGear";
-
+import ProductOverview from "../productOverview/productOverview";
 
 function CategoriesListed(props) {
   const location = useLocation();
@@ -35,43 +35,38 @@ function CategoriesListed(props) {
 
   return (
     <div>
-        <h2 className={`${typography.white100} ${typography.alignCenter} ${classes.categoryName}`}>{category}</h2>
+      <h2
+        className={`${typography.white100} ${typography.alignCenter} ${classes.categoryName}`}
+      >
+        {category}
+      </h2>
 
       {dataToDisplay.map((data, index) => (
         <div>
-          <Categories
+          <ProductOverview
             key={data.id}
-            id={data.id}
-            isNewProduct={data.new}
-            categoryName={data.category}
-            image={data.categoryImage.mobile}
-            mobileImage = {data.categoryImage.mobile}
-            tabletImage = {data.categoryImage.tablet}
-            desktopImage = {data.categoryImage.desktop}
-            productName={data.name}
-            text={data.description}
+            productID={data.id}
+            isProductOverview={true}
+   
           />
 
-          <div className = {`${linkStyle.link} ${linkStyle.orange}`}>
-
-          <Link
-            key={index}
-            to={{
-              pathname: "/productdetails/ProductDetails",
-              state: { id: data.id },
-            }}
-            className={`${typography.link} ${typography.white100}`}
-          >
-            
-            see product
-          </Link>
+          <div className={`${linkStyle.link} ${linkStyle.orange}`}>
+            <Link
+              key={index}
+              to={{
+                pathname: "/productdetails/ProductDetails",
+                state: { id: data.id },
+              }}
+              className={`${typography.link} ${typography.white100}`}
+            >
+              see product
+            </Link>
           </div>
-
         </div>
       ))}
 
-      <Menu/>
-      <BestGear/>
+      <Menu />
+      <BestGear />
     </div>
   );
 }
