@@ -8,11 +8,8 @@
   border-radius: 10px;
   padding-top: 95px;
 }
-.container{
-
-  padding: 24px 0;
-
-
+.container {
+  /* padding: 24px 0; */
 }
 
 .productName {
@@ -53,27 +50,30 @@
   margin: 25px 0px;
 }
 
-@media(min-width: 760px){
+@media (min-width: 760px) {
+  .topAd {
+    background: url("./assets/imgSpeaker-tablet.jpg");
+    height: 320px;
+    width: 689px;
+  }
 
-.topAd {
-  background: url("./assets/imgSpeaker-tablet.jpg");
-  height: 320px;
-  width: 689px;
+  .speakerLinkPositioning {
+    margin: 25px 50px;
+  }
 
-}
+  .bottomAd {
+    display: flex;
+    flex-direction: row;
+    padding-top: 24px;
+    width: 689px;
+    height: 320px;
+    justify-content: space-between;
+    margin: 0 auto;
+    column-gap: 15px;
 
-.speakerLinkPositioning {
-  margin: 25px 50px;
-}
+  }
 
-
-.bottomAd{
-  display: flex;
-  flex-direction: row;
- padding-top: 24px;
-}
-
- .imgContainer {
+  .imgContainer {
     height: 320px;
     width: 339px;
     /* margin: 24px auto; */
@@ -87,9 +87,11 @@
     background-color: #f1f1f1;
     margin: 0;
     border-radius: 10px;
-    /* padding: 48px 24px; */
+    padding: 87px 24px;
+   
   }
-
+  .bottomImg {
+    height: 100%;
+    width: 100%;
+  }
 }
-
-

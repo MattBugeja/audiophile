@@ -27,7 +27,7 @@ function SplitAd() {
 
       <div className={classes.bottomAd}>
         <div className={classes.imgContainer}>
-          <img className={classes.bottomImg} src={ImgEarphonesMobile} srcSet = {`${ImgEarphonesMobile} 760w, ${ImgEarphonesTablet} 1280w, ${ImgEarphonesDesktop} 1500w`} alt="" />
+          <img className={classes.bottomImg} src={ImgEarphonesTablet} srcSet = {`${ImgEarphonesMobile} 759w, ${ImgEarphonesTablet} 1280w, ${ImgEarphonesDesktop} 1500w`} alt="" />
         </div>
 
         <div className={classes.greyBkGround}>

@@ -48,7 +48,10 @@ function ProductDetails(props) {
       <Categories
         isNewProduct={data[productID].new}
         categoryName={data[productID].category}
-        image={data[productID].categoryImage.mobile}
+        image={data[productID].image.mobile}
+        mobileImage = {data[productID].image.mobile}
+        tabletImage = {data[productID].image.tablet}
+        desktopImage = {data[productID].image.desktop}
         productName={data[productID].name}
         text={data[productID].description}
       />
@@ -56,7 +59,8 @@ function ProductDetails(props) {
         <h6> &#8364; {data[productID].price.toLocaleString()}</h6>
 
         <div className={classes.orderRow}>
-          <button className={classes.signButton} onClick={() => moveDown()}>
+
+          <div className={classes.adjustQuantity}>          <button className={classes.signButton} onClick={() => moveDown()}>
             -
           </button>
           <textarea
@@ -67,6 +71,8 @@ function ProductDetails(props) {
           <button onClick={() => moveUp()} className={classes.signButton}>
             +
           </button>{" "}
+          </div>
+
           <button
             className={`${typography.link} ${typography.white100} ${classes.addToCart}`}
             onClick={updateOrderAmt}
@@ -85,7 +91,7 @@ function ProductDetails(props) {
           </p>
 
           <div className={classes.inTheBox}>
-            <h1 className={classes.title}>in the box</h1>
+            <h3 className={classes.title}>in the box</h3>
 
             <ul>
               {data[productID].includes.map((included, index) => (

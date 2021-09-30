@@ -1,12 +1,14 @@
 import classes from "./BestGear.module.css";
-import bestGearImg from "./assets/bestGearImg.jpg";
+import bestGearImgMobile from "./assets/bestGearImg-mobile.jpg";
+import bestGearImgTablet from "./assets/bestGearImg-tablet.jpg";
+import bestGearImgDesktop from "./assets/bestGearImg-desktop.jpg";
 import typography from "../../components/typography.module.css";
 
 function BestGear() {
   return (
     <div className={classes.container}>
       <div className={classes.imgContainer}>
-        <img className={classes.bestGearImg} src={bestGearImg} alt={"man listening to music"} />
+        <img className={classes.bestGearImg} src={bestGearImgMobile} srcSet = {`${bestGearImgMobile} 759w, ${bestGearImgTablet} 1280w, ${bestGearImgDesktop} 1500w`} alt="" /> alt={"man listening to music"} />
       </div>
 
       <div className={`${typography.alignCenter} ${classes.textContainer}`}>

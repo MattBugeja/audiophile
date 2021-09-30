@@ -1,6 +1,5 @@
 .container {
   padding: 75px 0;
-
 }
 
 .quantityInBox {
@@ -14,7 +13,7 @@
 
 .productDetailsSection {
   padding: 0 24px;
-    white-space: pre-line;
+  white-space: pre-line;
 }
 
 .features {
@@ -39,6 +38,8 @@
   margin-top: 15px;
   display: flex;
   flex-direction: row;
+  justify-content: start;
+  /* padding-left: 36px; */
 }
 
 .addToCart {
@@ -62,4 +63,9 @@
   background-color: #f1f1f1;
   padding-top: 15px;
   text-align: center;
+}
+
+.adjustQuantity {
+  display: flex;
+  flex-direction: row;
 }

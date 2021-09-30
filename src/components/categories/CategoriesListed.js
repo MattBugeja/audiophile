@@ -45,6 +45,9 @@ function CategoriesListed(props) {
             isNewProduct={data.new}
             categoryName={data.category}
             image={data.categoryImage.mobile}
+            mobileImage = {data.categoryImage.mobile}
+            tabletImage = {data.categoryImage.tablet}
+            desktopImage = {data.categoryImage.desktop}
             productName={data.name}
             text={data.description}
           />

@@ -70,14 +70,17 @@ function Footer() {
       </div>
 
       <div
-        className={`${typography.textContent} ${typography.white50} ${classes.copyright}`}
-      >
-        Copyright 2021. All Rights Reserved
-      </div>
+         className= {classes.copyrightAndSocialMedia}>
+      
+        <p className={`${typography.textContent} ${typography.white50}`}>Copyright 2021. All Rights Reserved</p>
+      
 
       <div className={classes.socialMedia}>
         <img src={FacebookIcon} /> <img src={TwitterIcon} />{" "}
         <img src={InstagramIcon} />{" "}
+      </div>
+
+
       </div>
     </footer>
   );

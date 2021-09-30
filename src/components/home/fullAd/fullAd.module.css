@@ -3,14 +3,14 @@
   top: 0;
   left: 0;
   width: 327px;
-  padding: 24px 24px;
+  padding: 24px 0;
   background-color: #d87d4a;
   background-image: url("./assets/pattern-circles.svg");
   background-repeat: no-repeat;
   background-position: -115px -110px;
   background-size: 170%;
   height: 600px;
-  margin: 0px auto;
+  margin: 48px auto;
   border-radius: 10px;
 }
 
@@ -54,7 +54,7 @@
     background-size: 125%;
     width: 689px;
     height: 720px;
-    margin: 0 auto;
+    margin: 48px auto;
     border-radius: 10px;
   }
 
