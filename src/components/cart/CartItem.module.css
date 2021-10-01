@@ -36,6 +36,7 @@
   /* column-gap: 15px; */
   background-color: transparent;
   margin-top: 30px;
+  /* padding-left: 12px; */
 }
 
 .itemImage {
@@ -45,15 +46,36 @@
 
 .itemName {
   font-weight: bold;
-  width: 80px;
+
   letter-spacing: 0px;
+  /* padding-left: 15px; */
+  /* flex-grow: 3; */
 }
 
 .itemPrice {
   letter-spacing: 0;
+  /* padding-left: 10px; */
 }
 
 .changeAmount {
   display: flex;
   align-items: center;
+}
+
+.imageAndPrice{
+
+  display:flex;
+  flex-direction: row;
+  column-gap: 24px;
+  align-items: center;
+
+
+
+}
+
+@media(min-width: 765px){
+
+  /* .itemName{width: 360px;} */
+
+
 }

@@ -6,7 +6,7 @@
   margin: 0 auto;
   padding: 32px;
   position: fixed;
-  top: 60%;
+  top: 50%;
   transform: translate(-50%, -50%);
   width: 327px;
   z-index: 50;
@@ -29,3 +29,15 @@
   overflow: hidden;
 }
 
+@media(min-width: 765px){
+
+  .container{
+
+width: 540px;
+height: 650px;
+  }
+
+
+
+
+}

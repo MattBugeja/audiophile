@@ -10,7 +10,7 @@ function CartItemsListed(props) {
   const orderSummary = props.orderSummary;
 
   return (
-    <div>
+    <div className={classes.container}>
       {Object.keys(orderSummary).map((item, index) => (
         <div key={index}>
           <CartItem

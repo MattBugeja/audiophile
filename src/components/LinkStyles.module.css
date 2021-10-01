@@ -31,3 +31,16 @@
   background-color: transparent;
   border: 1px solid black;
 }
+
+
+
+@media(min-width: 1400px){
+  .linkLeft{
+
+    margin: 0;
+  
+    
+  }
+
+
+}

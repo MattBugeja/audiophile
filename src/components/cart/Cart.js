@@ -7,7 +7,7 @@ import linkStyle from "../../components/LinkStyles.module.css";
 
 import {ReactComponent as CloseIcon} from "./assets/closeIcon.svg"
 
-function Cart() {
+function Cart(props) {
   const getOrderSummary = localStorage.getItem("orderSummary");
   let orderSummary = "";
 
@@ -43,7 +43,7 @@ function Cart() {
   return (
     
       <div className={`${typography.alignCenter} ${classes.cartContainer}`}>
-        <div className = {typography.alignRight}><CloseIcon/></div>
+        <div className = {typography.alignRight}><CloseIcon onClick={props.close}/></div>
 
         <div className={classes.firstRow}>
           <h6>cart ({numOfItems})</h6>

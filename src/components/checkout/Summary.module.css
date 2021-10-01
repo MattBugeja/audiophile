@@ -3,6 +3,8 @@
     background-color: white;
     border-radius: 5px;
     padding: 24px 24px 64px 24px;
+    max-width: 365px;
+    margin: 0 auto;
    
 }
 
@@ -11,5 +13,28 @@
     height: 48px;
     margin-top: 24px;
     border:0;
-}
+    background-color: #D87D4A ;
+    text-transform: uppercase;
+ }
 
+
+ @media(min-width: 760px){
+
+  .container{max-width: 691px};
+
+
+ }
+
+
+ @media(min-width: 1400px){
+
+    .container{max-width: 691px;
+       width: 350px;
+       height: 612px;
+   
+        margin:0;
+    padding: 20px};
+    
+  
+  
+   }

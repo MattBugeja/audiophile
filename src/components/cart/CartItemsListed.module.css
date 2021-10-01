@@ -17,6 +17,14 @@
   align-items: left;  
   background-color: black;
   padding: 24px;
+  width: 100%
+
+
+  }
+
+  .container{
+
+    /* display: flex; */
 
 
   }

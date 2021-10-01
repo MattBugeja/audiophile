@@ -1,12 +1,13 @@
 .card {
   background-color: #f1f1f1;
-  width: 90%;
+  width: 327px;
   height: 165px;
   position: relative;
   top: 0;
   left: 0;
   border-radius: 5px;
-  margin: 80px auto 0 auto;
+  /* margin: 80px auto 0 auto; */
+  padding-top: 80px;
 }
 
 .image {
@@ -19,7 +20,7 @@
 }
 
 .productName {
-  position: absolute;
+  /* position: absolute; */
   margin: 0px auto 0 auto;
   bottom: 30%;
   left: 0;
@@ -32,4 +33,28 @@
   bottom: 20%;
   left: 0;
   right: 0;
+}
+
+
+@media(min-width:760px){
+
+ .card{
+   /* width: 223px; */
+  /* height: 165px; */
+  width: 31.53%;
+  background-color: #f1f1f1;
+  position: relative;}
+
+
+  /* .image {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    margin-left: -90px;
+  } */
+  
+
+ 
 }

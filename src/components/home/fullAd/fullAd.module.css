@@ -47,15 +47,15 @@
 
 @media (min-width: 760px) {
   .container {
-    background-image: url("./assets/pattern-circles.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-image: url("./assets/pattern-circles.svg"); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
     background-position: 50% -250px;
     background-size: 125%;
     width: 689px;
     height: 720px;
-    margin: 48px auto;
-    border-radius: 10px;
+    /* margin: 48px auto; */
+    /* border-radius: 10px; */
   }
 
   .imgContainer {
@@ -78,5 +78,51 @@
 
   .content {
     margin: 60px auto 0 auto;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    display: flex;
+    align-items: center;
+    background-position: -160% -60px;
+    background-size: 90%;
+    width: 1110px;
+    height: 560px;
+    overflow: hidden;
+    padding-top: 115px;
+  }
+
+  .imgContainer {
+    margin: 55px 100px;
+    width: 410px;
+    height: 493px;
+  }
+
+  .imgSpeaker {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .productName {
+    width: 40%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  .content {
+    margin: 0px auto 0 auto;
+    width: 349px;
+    height: 493px;
+    padding-top: 20px;
+  }
+  .description {
+    width: 350px;
+    text-transform: none;
+    margin: 0;
+    padding-top: 24px;
+    margin-bottom: 20px;
   }
 }

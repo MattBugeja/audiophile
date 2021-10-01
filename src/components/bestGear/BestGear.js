@@ -8,13 +8,13 @@ function BestGear() {
   return (
     <div className={classes.container}>
       <div className={classes.imgContainer}>
-        <img className={classes.bestGearImg} src={bestGearImgMobile} srcSet = {`${bestGearImgMobile} 759w, ${bestGearImgTablet} 1280w, ${bestGearImgDesktop} 1500w`} alt="" /> alt={"man listening to music"} />
+        <img className={classes.bestGearImg} src={bestGearImgMobile} srcSet = {`${bestGearImgMobile} 759w, ${bestGearImgTablet} 1280w, ${bestGearImgDesktop} 1500w`} alt="" />
       </div>
 
-      <div className={`${typography.alignCenter} ${classes.textContainer}`}>
+      <div className={`${typography.alignCenter} ${classes.textContainer} ${typography.alignDesktopLeft}`}>
         <h2>bringing you the <span className ={typography.orange}>best</span>  audio gear</h2>
 <br/><br/>
-        <p className={`${typography.textContent} ${typography.black50}`}>
+        <p className={`${typography.textContent} ${typography.black50} ${typography.alignDesktopLeft}`}>
           Located at the heart of New York City, Audiophile is the premier stor
           for high end headphones, earphones, speakers, and audio accessories.
           We have a large showroom and lucury demonstartion rooms available for

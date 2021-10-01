@@ -1,5 +1,5 @@
 .imageContainer {
-  width: 90%;
+  max-width: 327px;
   height: 120px;
   margin: 40px auto 0 auto;
   border-radius: 10px;
@@ -8,30 +8,22 @@
 
 .image {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .productName {
   margin: 24px 0 24px 0;
 }
 
-.othersSection{
-
+.othersSection {
   padding-bottom: 48px;
-
-
 }
 
-@media(min-width: 760px){
-
-  .othersSection{
-
-    width: 223px;
-    height: 471px;
-
-    /* padding-bottom: 48px; */
-  
-  
+@media (min-width: 760px) {
+  .othersSection {
+    max-width: 223px;
+    height: 500px;
+    margin: 0 auto;
   }
 
   .imageContainer {
@@ -41,6 +33,22 @@
     border-radius: 10px;
     overflow: hidden;
   }
+}
 
+@media (min-width: 1400px) {
+  .othersSection {
+    max-width: 350px;
+   width: 350px;
+    height: 500px;
+    margin: 0;
+  }
 
+  .imageContainer {
+    max-width: 350px ;
+    width: 350px;
+    height: 318px;
+    margin: 40px 0 0 0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
 }

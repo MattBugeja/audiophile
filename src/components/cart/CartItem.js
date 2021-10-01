@@ -35,6 +35,7 @@ function CartItem(props) {
 
   return (
     <div className={classes.itemRow}>
+      <div className={classes.imageAndPrice}>
       <div className={classes.imageContainer}>
         <img className={classes.itemImage} src={orderSummary["image"]} alt={""} />
       </div>
@@ -42,7 +43,7 @@ function CartItem(props) {
         <h1 className={`${typography.textContent} ${typography.alignLeft} ${classes.itemName}`}>{orderSummary["cartName"]}</h1>
         <p className={`${typography.overline} ${typography.black50} ${typography.alignLeft} ${classes.itemPrice}`}>&#8364; {orderSummary["price"]}</p>
       </div>
-
+      </div>
 
       {!isSummary && 
       <div className={classes.changeAmount}>

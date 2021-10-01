@@ -47,21 +47,7 @@ function CategoriesListed(props) {
             key={data.id}
             productID={data.id}
             isProductOverview={true}
-   
           />
-
-          <div className={`${linkStyle.link} ${linkStyle.orange}`}>
-            <Link
-              key={index}
-              to={{
-                pathname: "/productdetails/ProductDetails",
-                state: { id: data.id },
-              }}
-              className={`${typography.link} ${typography.white100}`}
-            >
-              see product
-            </Link>
-          </div>
         </div>
       ))}
 

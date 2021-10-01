@@ -2,7 +2,9 @@ import classes from "./productOverview.module.css";
 import data from "../../data.json";
 import { useState, useEffect } from "react";
 import typography from "../../components/typography.module.css";
+import linkStyle from "../../components/LinkStyles.module.css";
 import PriceAndQuantities from "../productdetails/PriceAndQuantities";
+import { Link } from "react-router-dom";
 
 function ProductOverview(props) {
   const [productID] = useState(props.productID);
@@ -36,10 +38,10 @@ function ProductOverview(props) {
           
             <img
             className={classes.image}
-            src={window.location.origin + `${imgSource.tablet}`}
+            src={window.location.origin + `${imgSource.mobile}`}
             srcSet={
               window.location.origin +
-              `${imgSource.tablet} 759w, ${imgSource.tablet} 1280w, ${imgSource.desktop} 1500w`
+              `${imgSource.mobile} 759w, ${imgSource.tablet} 1280w, ${imgSource.desktop} 1500w`
             }
             alt={""}
           />
@@ -53,13 +55,29 @@ function ProductOverview(props) {
               new product
             </div>
           )}
-          <h4 className={` ${typography.alignCenter}  ${isProductOverview ? `${classes.productName}` : `${classes.productNameDetailed}`}`}>
+          <h2 className={` ${typography.alignCenter}  ${isProductOverview ? `${classes.productName}` : `${classes.productNameDetailed}`}`}>
             {data[productID].name}
-          </h4>
+          </h2>
 
-          <p className={`${typography.textContent} ${typography.black50}`}>
+          <p className={`${typography.textContent} ${typography.black50} ${classes.textContentSpacing}`}>
             {data[productID].description}
           </p>
+
+          {isProductOverview && 
+
+          (<div className={`${linkStyle.link} ${linkStyle.orange} ${linkStyle.linkLeft}`}>
+            <Link
+              // key={index}
+              to={{
+                pathname: "/productdetails/ProductDetails",
+                state: { id: data[productID].id },
+              }}
+
+              className={`${typography.link} ${typography.white100}`}
+            >
+              see product
+            </Link>
+          </div>)}
 
           {!isProductOverview && <PriceAndQuantities productID = {productID}/>}
 

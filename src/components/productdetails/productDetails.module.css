@@ -1,5 +1,7 @@
 .container {
   padding: 75px 0;
+  
+
 }
 
 .quantityInBox {
@@ -17,11 +19,13 @@
 }
 
 .features {
-  margin: 48px 0;
+  margin: 48px auto;
+  max-width: 327px;
+  
 }
 
 .title {
-  margin: 24px 0;
+  padding-bottom: 24px;
   width: 50%;
 }
 
@@ -30,11 +34,10 @@
 }
 
 @media (min-width: 760px) {
-
   .title {
     margin: 0;
-    /* width: 50%; */
   }
+
   .inTheBox {
     display: flex;
     flex-direction: row;
@@ -49,11 +52,87 @@
     margin: 0;
     font-size: 0;
   }
+  .others {
+    max-width: 689px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+    margin: 0 auto;
+  }
+
+  .features{max-width: 689px;}
 }
 
-.others{
+
+@media (min-width: 760px) {
+  .title {
+    margin: 0;
+  }
+
+  .inTheBox {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: start;
+    align-items: flex-start;
+    margin-top: 60px;
+  }
+
+  .inTheBox ul {
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+  }
+  .others {
+    max-width: 689px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+    margin: 0 auto;
+  }
+
+  .features{max-width: 689px;}
+}
+
+
+@media (min-width: 1400px) {
+  .title {
+    margin: 0;
+    width: 350px;
+  }
+
+  .inTheBox {
+    /* display: flex; */
+    flex-direction: column;
+
+    /* justify-content: start; */
+    /* align-items: flex-start; */
+    margin: 0 auto;
+  }
+
+  .inTheBox ul {
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    width: 350px;
+    /* text-align: center; */
+  }
+  .others {
+    max-width: 1110px;
+    width: 1110px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 0;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .features{max-width: 1110px;
   display: flex;
-  flex-direction: row;
-  padding: 0 24px;
-  column-gap: 24px;
+column-gap: 50px;}
+
+  .textContent{
+width: 635px;
+
+  }
 }

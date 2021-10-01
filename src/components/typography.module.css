@@ -39,7 +39,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2.35rem;
+  font-size: 2rem;
   letter-spacing: 0.0719rem;
   line-height: 2.25rem;
 }
@@ -50,11 +50,11 @@ h4 {
   /* line-height: 2.375rem; */
 }
 
-/* h5 {
+h5 {
     font-size: 1.5rem;
     letter-spacing: 0.1062rem;
     line-height: 2.0625rem;
-  } */
+  }
 
 h6 {
   font-size: 18px;
@@ -117,4 +117,9 @@ h6 {
 
 .alignRight {
   text-align: right;
+}
+
+
+@media (min-width: 1400px) {
+  .alignDesktopLeft{text-align: left;}
 }

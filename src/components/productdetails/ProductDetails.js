@@ -24,7 +24,10 @@ function ProductDetails(props) {
       />
 
       <div className={classes.productDetailsSection}>
+
         <div className={classes.features}>
+
+          <div className = {classes.textContent}>
           <h3 className={classes.title}>features</h3>
 
           <p
@@ -32,7 +35,7 @@ function ProductDetails(props) {
           >
             {data[productID].features}
           </p>
-
+          </div>
           <div className={classes.inTheBox}>
             <h3 className={classes.title}>in the box</h3>
             <div>
@@ -63,15 +66,17 @@ function ProductDetails(props) {
       </h3>
 
       <section className={classes.others}>
-
-      {data[productID].others.map((other, index) => (
-        <Others
-          key={index}
-          image={other.image.tablet}
-          productName={other.name}
-          id={other.id}
-        />
-      ))}
+        {data[productID].others.map((other, index) => (
+          <Others
+            key={index}
+            image={other.image.mobile}
+            imgSrcMobile={other.image.mobile}
+            imgSrcTablet={other.image.tablet}
+            imgSrcDesktop={other.image.desktop}
+            productName={other.name}
+            id={other.id}
+          />
+        ))}
       </section>
       <Menu />
       <BestGear />

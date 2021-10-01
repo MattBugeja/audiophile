@@ -1,65 +1,57 @@
-import CartItemsListed from "../cart/CartItemsListed"
-import classes from "./Summary.module.css"
+import CartItemsListed from "../cart/CartItemsListed";
+import classes from "./Summary.module.css";
 import { useLocation } from "react-router";
 import { useState } from "react";
 import Thanks from "./ThanksModal";
 import OverlayMenu from "../overlay/OverlayMenu";
+import linkStyles from "../LinkStyles.module.css"
+import typography from "../typography.module.css"
 
-function Summary(){
-    const [orderPlaced, setOrderPlaced] = useState(false)
+function Summary() {
+  const [orderPlaced, setOrderPlaced] = useState(false);
 
-    const getOrderSummary = localStorage.getItem("orderSummary");
- 
-    const orderSummary = JSON.parse(getOrderSummary);
+  const getOrderSummary = localStorage.getItem("orderSummary");
 
-    const location = useLocation()
+  const orderSummary = JSON.parse(getOrderSummary);
 
-    const {totalAmount} = location.state;
-  
-    function doesNothing (){
+  const location = useLocation();
 
-        
+  const { totalAmount } = location.state;
 
-    }
+  function doesNothing() {}
 
+  function orderHandler() {
+    setOrderPlaced(true);
+  }
 
-    function orderHandler(){
+  return (
+    <div className={classes.container}>
+      <h6 className={classes.title}>Summary</h6>
 
-        setOrderPlaced(true)
-       
+      <CartItemsListed
+        orderSummary={orderSummary}
+        total={totalAmount}
+        isSummary={true}
+        change={doesNothing}
+      />
 
+      <button onClick={orderHandler} className={` ${classes.btn} ${typography.link} ${typography.white100} `}>
+        Continue and Pay{" "}
+      </button>
 
+      {orderPlaced && <OverlayMenu />}
 
-    }
-
-
-
-
-
-return(
-
-
-    <div className = {classes.container}>
-        <h1 className={classes.title}>Summary</h1>
-
-        <CartItemsListed orderSummary={orderSummary} total = {totalAmount} isSummary = {true} change = {doesNothing}/>
-
-
-        <button onClick={orderHandler} className={classes.btn}>Continue and Pay </button>
-
-        {orderPlaced && <OverlayMenu/>}
-
-        {orderPlaced && <Thanks orderSummary={orderSummary} total = {totalAmount} isSummary = {true} isCheckedOut = {true} change = {doesNothing}/>
-}
-
+      {orderPlaced && (
+        <Thanks
+          orderSummary={orderSummary}
+          total={totalAmount}
+          isSummary={true}
+          isCheckedOut={true}
+          change={doesNothing}
+        />
+      )}
     </div>
-
-
-
-)
-
-
-
+  );
 }
 
-export default Summary
+export default Summary;

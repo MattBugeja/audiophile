@@ -18,6 +18,9 @@ function PriceAndQuantities(props) {
   }
 
   function updateOrderAmt() {
+
+    if (counter > 0) { 
+
     let orderSummary = localStorage.getItem("orderSummary");
     if (orderSummary === null) {
       localStorage.setItem("orderSummary", JSON.stringify(orderAmt));
@@ -32,7 +35,7 @@ function PriceAndQuantities(props) {
       price: data[productID].price,
       quantity: counter,
     };
-    localStorage.setItem("orderSummary", JSON.stringify(orderSummary));
+    localStorage.setItem("orderSummary", JSON.stringify(orderSummary));}
   }
 
   return (

@@ -1,6 +1,6 @@
 .container {
   margin: 80px auto 80px auto;
-  padding: 0 24px;
+  max-width: 327px;
 }
 
 .imgContainer {
@@ -18,4 +18,31 @@
 .textContainer {
   margin-top: 36px;
   padding: 10px;
+}
+
+@media (min-width: 760px) {
+  .container {
+    max-width: 689px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1110px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  .imgContainer {
+    height: 588px;
+    width: 540px;
+  }
+
+  .textContainer {
+    margin: 0;
+    width: 50%;
+    padding-right: 80px;
+  }
 }

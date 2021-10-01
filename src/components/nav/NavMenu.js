@@ -16,8 +16,8 @@ function NavMenu() {
   const closeMobileMenu = () => setMenuIsOpen(false);
 
   const [cartIsOpen, setCartIsOpen] = useState(false);
-  const openCart = () => setCartIsOpen(!cartIsOpen);
-  const closeCart = () => setCartIsOpen(false);
+  const openCart = () => setCartIsOpen(true);
+  const closeCart = () => setCartIsOpen(false); 
 
   return (
     <header className={classes.header}>
@@ -53,16 +53,12 @@ function NavMenu() {
 
         
 
-        <div className={classes.mobileMenu} onClick={openCart}>
-          {cartIsOpen ? (
-            <CartIcon className={classes.cartIcon} />
-          ) : (
-            <CartIcon className={classes.cartIcon} />
-          )}
-
-
+        <div className={classes.mobileMenu} >
+           <CartIcon className={classes.cartIcon} onClick={openCart} />
+    
+          
           {cartIsOpen && <OverlayMenu />}
-          {cartIsOpen && <Cart onClick ={openCart}/>}
+          {cartIsOpen && <Cart close={closeCart}/>}
         </div>
 
 

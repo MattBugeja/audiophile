@@ -32,8 +32,6 @@ function Thanks(props) {
 
       <CartItemsListed orderSummary={props.orderSummary} total = {props.total} isSummary = {true} isCheckedOut = {true} change = {props.change}/>
 
-
-
       </div>
       <div className={linkStyle.linkWide}>
         {" "}
