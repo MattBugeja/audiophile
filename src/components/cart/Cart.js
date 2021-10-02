@@ -4,8 +4,7 @@ import CartItemsListed from "./CartItemsListed";
 import { Link } from "react-router-dom";
 import typography from "../../components/typography.module.css";
 import linkStyle from "../../components/LinkStyles.module.css";
-
-import {ReactComponent as CloseIcon} from "./assets/closeIcon.svg"
+import { ReactComponent as CloseIcon } from "./assets/closeIcon.svg";
 
 function Cart(props) {
   const getOrderSummary = localStorage.getItem("orderSummary");
@@ -24,47 +23,60 @@ function Cart(props) {
   }
 
   useEffect(() => {
-      setTotal(0);
-      Object.keys(orderSummary).map((name) =>
-        setTotal(
-          (total) =>
-            total + orderSummary[name].price * orderSummary[name].quantity
-        )
-      );
-      setNumOfItems(Object.keys(orderSummary).length);
-    }, [change]);
+    setTotal(0);
+    Object.keys(orderSummary).map((name) =>
+      setTotal(
+        (total) =>
+          total + orderSummary[name].price * orderSummary[name].quantity
+      )
+    );
+    setNumOfItems(Object.keys(orderSummary).length);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [change]);
 
   function removeAll() {
-     localStorage.clear();
+    localStorage.clear();
     detectChange();
   }
 
-
   return (
-    
-      <div className={`${typography.alignCenter} ${classes.cartContainer}`}>
-        <div className = {typography.alignRight}><CloseIcon onClick={props.close}/></div>
-
-        <div className={classes.firstRow}>
-          <h6>cart ({numOfItems})</h6>
-          <button className = {`${typography.textContent} ${typography.black50} ${classes.removeBtn}`} onClick={removeAll}>Remove all</button>
-        </div>
-
-        
-   
-          <CartItemsListed
-            orderSummary={orderSummary}
-            change={detectChange}
-            total={total}
-            isSummary={false}
-          />
-       
-       {total > 0 && (<div className= {`${linkStyle.linkWide} ${linkStyle.orange}`}>
-<Link className={`${typography.link} ${typography.white100}`} to={{pathname:"/checkout/Checkout", state: {totalAmount: total}}}>Checkout</Link>       
-</div> )}
-
+    <div className={`${typography.alignCenter} ${classes.cartContainer}`}>
+      <div className={typography.alignRight}>
+        <CloseIcon onClick={props.close} />
       </div>
-   
+
+      <div className={classes.firstRow}>
+        <h6>cart ({numOfItems})</h6>
+        <button
+          className={`${typography.textContent} ${typography.black50} ${classes.removeBtn}`}
+          onClick={removeAll}
+        >
+          Remove all
+        </button>
+      </div>
+
+      <CartItemsListed
+        orderSummary={orderSummary}
+        change={detectChange}
+        total={total}
+        isSummary={false}
+      />
+
+      {total > 0 && (
+        <div className={`${linkStyle.linkWide} ${linkStyle.orange}`}>
+          <Link
+            onClick={props.close}
+            className={`${typography.link} ${typography.white100}`}
+            to={{
+              pathname: "/checkout/Checkout",
+              state: { totalAmount: total },
+            }}
+          >
+            Checkout
+          </Link>
+        </div>
+      )}
+    </div>
   );
 }
 

@@ -4,15 +4,15 @@
 }
 
 .imgContainer {
-  margin: 0 auto;
   border-radius: 10px;
-  overflow: hidden;
   height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .bestGearImg {
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
 .textContainer {
@@ -28,11 +28,11 @@
 
 @media (min-width: 1400px) {
   .container {
-    max-width: 1110px;
-    display: flex;
-    flex-direction: row-reverse;
     align-items: center;
     column-gap: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1110px;
   }
 
   .imgContainer {
@@ -42,7 +42,7 @@
 
   .textContainer {
     margin: 0;
-    width: 50%;
     padding-right: 80px;
+    width: 50%;
   }
 }

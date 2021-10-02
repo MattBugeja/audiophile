@@ -3,8 +3,8 @@ import ImgEarphonesMobile from "./assets/imgEarphones-mobile.jpg";
 import ImgEarphonesTablet from "./assets/imgEarphones-tablet.jpg";
 import ImgEarphonesDesktop from "./assets/imgEarphones-desktop.jpg";
 import { Link } from "react-router-dom";
-import typography from "../../../components/typography.module.css";
-import linkStyle from "../../../components/LinkStyles.module.css";
+import typography from "../../components/typography.module.css";
+import linkStyle from "../../components/LinkStyles.module.css";
 
 function SplitAd() {
   return (
@@ -18,7 +18,7 @@ function SplitAd() {
               pathname: "/productdetails/ProductDetails",
               state: { id: 5 },
             }}
-            className={`${typography.link} ${typography.black}`}
+            className={`${typography.link} ${typography.black100}`}
           >
             see product
           </Link>
@@ -27,7 +27,7 @@ function SplitAd() {
 
       <div className={classes.bottomAd}>
         <div className={classes.imgContainer}>
-          <img className={classes.bottomImg} src={ImgEarphonesTablet} srcSet = {`${ImgEarphonesMobile} 759w, ${ImgEarphonesTablet} 1280w, ${ImgEarphonesDesktop} 1500w`} alt="" />
+          <img className={classes.bottomImg} src={ImgEarphonesTablet} srcSet = {`${ImgEarphonesMobile} 759w, ${ImgEarphonesTablet} 1399w, ${ImgEarphonesDesktop} 1500w`} alt="" />
         </div>
 
         <div className={classes.greyBkGround}>
@@ -38,7 +38,7 @@ function SplitAd() {
                 pathname: "/productdetails/ProductDetails",
                 state: { id: 0 },
               }}
-              className={`${typography.link} ${typography.black}`}
+              className={`${typography.link} ${typography.black100}`}
             >
               see product
             </Link>

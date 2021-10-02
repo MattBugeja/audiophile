@@ -5,22 +5,23 @@
 
 
 .header {
+  background-color: black;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 3rem 1rem 0rem 1rem;
-  position: absolute;
+  padding: 3rem 7rem 0rem 7rem;
   width: 100%;
   z-index: 2;
-  background-color: black;
 }
 
 .logoNav {
+    height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1400px;
   width: 100%;
-  height: 50px;
 }
 
 .logo {
@@ -28,30 +29,41 @@
 }
 
 .navOptions {
-  align-content: right;
-  align-items: center;
+  display: none;
+
+}
+
+.navOptionsDesktop{
   display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-  text-decoration: none;
-  width: 45%;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 430px;
+}
+
+.option{
+  display: none;
 }
 
 .mobileMenu {
   display: none;
 }
 
-@media only screen and (max-width: 1450px) {
+.cartIcon {
+  height: 45px;
+}
+
+@media only screen and (max-width: 1400px) {
+
+  .navOptionsDesktop{
+    display:none;
+  }
   
   .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    left: 0;
     padding: 3rem 1rem 0rem 1rem;
     position: absolute;
-    width: 100%;
-    z-index: 2;
-  }
+    top: 0;
+   }
 
   .navOptions {
     display: flex;
@@ -81,6 +93,7 @@
 
   .option {
      height: 100%;
+    display: block;
     padding: 1rem 1rem;
     width:100%
   }
@@ -90,9 +103,7 @@
     width: fit-content;
   }
 
-  .cartIcon {
-    height: 45px;
-  }
+
 
 
 }

@@ -29,6 +29,7 @@ function ProductOverview(props) {
     isProductOverview
       ? setImgSource(overviewImgSource)
       : setImgSource(detailedImgSource);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -41,7 +42,7 @@ function ProductOverview(props) {
             src={window.location.origin + `${imgSource.mobile}`}
             srcSet={
               window.location.origin +
-              `${imgSource.mobile} 759w, ${imgSource.tablet} 1280w, ${imgSource.desktop} 1500w`
+              `${imgSource.mobile} 759w, ${imgSource.tablet} 1399w, ${imgSource.desktop} 1500w`
             }
             alt={""}
           />

@@ -1,27 +1,25 @@
 .topAd {
-  background: url("./assets/imgSpeaker-mobile.jpg");
-  background-size: cover;
   background-position: center center;
-  height: 320px;
-  width: 327px;
-  margin: 0 auto;
+  background-size: cover;
+  background: url("./assets/imgSpeaker-mobile.jpg");
   border-radius: 10px;
+  height: 320px;
+  margin: 0 auto;
   padding-top: 95px;
+  width: 327px;
 }
-.container {
-  /* padding: 24px 0; */
-}
+
 
 .productName {
   margin: 0 0 32px 16px;
 }
 
 .imgContainer {
-  height: 200px;
-  width: 327px;
-  margin: 0 auto;
   border-radius: 15px;
+  height: 200px;
+  margin: 0 auto;
   overflow: hidden;
+  width: 327px;
 }
 
 .bottomImg {
@@ -32,18 +30,18 @@
 .bottomAd {
   display: flex;
   flex-direction: column;
-  row-gap: 24px;
   height: 424px;
   margin-top: 24px;
+  row-gap: 24px;
 }
 
 .greyBkGround {
-  height: 200px;
-  width: 327px;
   background-color: #f1f1f1;
-  margin: 0 auto;
   border-radius: 10px;
+  height: 200px;
+  margin: 0 auto;
   padding: 48px 24px;
+  width: 327px;
 }
 
 .linkPositioning {
@@ -55,36 +53,35 @@
     background: url("./assets/imgSpeaker-tablet.jpg");
     height: 320px;
     width: 689px;
-  }
+    }
 
   .speakerLinkPositioning {
     margin: 25px 50px;
   }
 
   .bottomAd {
-    display: flex;
+    column-gap: 15px;
     flex-direction: row;
-    padding-top: 24px;
-    width: 689px;
     height: 320px;
     justify-content: space-between;
     margin: 0 auto;
-    column-gap: 15px;
+    padding-top: 24px;
+    width: 689px;
 
   }
 
   .imgContainer {
-    height: 320px;
-    width: 339px;
     border-radius: 15px;
+    height: 320px;
     overflow: hidden;
+    width: 339px;
   }
 
   .greyBkGround {
     height: 320px;
-    width: 339px;
     margin: 0;
     padding: 87px 24px;
+    width: 339px;
    
   }
   .bottomImg {
@@ -93,7 +90,7 @@
   }
 }
 
-@media (min-width: 760px) {
+@media (min-width: 1400px) {
   .topAd {
     background: url("./assets/imgSpeakers-desktop.jpg");
     height: 320px;
@@ -105,8 +102,8 @@
   }
 
   .bottomAd {
-    width: 1110px;
     height: 320px;
+    width: 1110px;
   }
 
   .imgContainer {

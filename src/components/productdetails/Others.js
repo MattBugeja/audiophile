@@ -5,11 +5,13 @@ import linkStyle from "../../components/LinkStyles.module.css";
 
 function Others(props){
 
+    
+
 return(
 
     <div className={classes.othersSection}>
 
-        <div className={classes.imageContainer}><img className={classes.image} src ={props.imgSrcMobile} srcSet = {`${props.imgSrcMobile} 759w, ${props.imgSrcTablet} 1280w, ${props.imgSrcDesktop} 1500w`} alt=""  alt={""}/></div>
+        <div className={classes.imageContainer}><img className={classes.image} src ={props.imgSrcMobile} srcSet = {`${props.imgSrcMobile} 759w, ${props.imgSrcTablet} 1399w, ${props.imgSrcDesktop} 1500w`} alt="" /></div>
 
         <h5 className = {`${typography.alignCenter} ${classes.productName}`}>{props.productName}</h5>
 

@@ -24,17 +24,15 @@ function ProductDetails(props) {
       />
 
       <div className={classes.productDetailsSection}>
-
         <div className={classes.features}>
+          <div className={classes.textContent}>
+            <h3 className={classes.title}>features</h3>
 
-          <div className = {classes.textContent}>
-          <h3 className={classes.title}>features</h3>
-
-          <p
-            className={`${typography.textContent} ${typography.alignLeft} ${typography.black50} `}
-          >
-            {data[productID].features}
-          </p>
+            <p
+              className={`${typography.textContent} ${typography.alignLeft} ${typography.black50} `}
+            >
+              {data[productID].features}
+            </p>
           </div>
           <div className={classes.inTheBox}>
             <h3 className={classes.title}>in the box</h3>
@@ -61,11 +59,11 @@ function ProductDetails(props) {
         <DetailedImages productID={productID} />
       </div>
 
-      <h3 className={` ${typography.alignCenter} ${classes.title2}`}>
+      <h3 className={` ${typography.alignCenter} ${classes.similarProductsTitle}`}>
         You may also like
       </h3>
 
-      <section className={classes.others}>
+      <section className={classes.similarProducts}>
         {data[productID].others.map((other, index) => (
           <Others
             key={index}

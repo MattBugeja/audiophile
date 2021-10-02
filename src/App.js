@@ -2,17 +2,14 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ScrollToTop } from "react-router-scroll-to-top";
 import { useState,} from "react";
-import BestGear from "./components/bestGear/BestGear";
 import Cart from "./components/cart/Cart";
 import CategoriesListed from "./components/categories/CategoriesListed";
 import Checkout from "./components/checkout/Checkout";
 import CounterContext from "./components/contexts/CounterContext";
 import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home";
-import Menu from "./components/menu/Menu";
 import NavMenu from "./components/nav/NavMenu";
 import ProductDetails from "./components/productdetails/ProductDetails";
-import Thanks from "./components/checkout/ThanksModal";
 
 function App() {
   const [xx59Counter, setXx59Counter] = useState(0);
@@ -44,7 +41,6 @@ function App() {
       <Router>
         <div className="App">
 
-          {/* <Thanks/> */}
      
           <ScrollToTop>
             <NavMenu />
@@ -70,8 +66,7 @@ function App() {
               </Route>
             </Switch>
           </ScrollToTop>
-          {/* <Menu /> */}
-          {/* <BestGear /> */}
+    
           <Footer />
         </div>
       </Router>

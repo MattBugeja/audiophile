@@ -8,6 +8,8 @@ import { ReactComponent as CartIcon } from "./assets/icon-cart.svg";
 import OverlayMenu from "../overlay/OverlayMenu";
 import classes from "./NavMenu.module.css";
 import Menu from "../menu/Menu";
+import typography from "../../components/typography.module.css"
+// import linkStyle from "/../../components/LinkStyles.module.css"
 
 import Cart from "../cart/Cart";
 function NavMenu() {
@@ -51,9 +53,54 @@ function NavMenu() {
           </Link>
         </div>
 
+
+        <ul className ={classes.navOptionsDesktop}>
+          <li>
+            <Link
+              to={"/"}
+              className={`${typography.link} ${typography.white100}`}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={{
+                pathname: "/categories/CategoriesListed",
+                state: { id: "headphones" },
+              }}
+              className={`${typography.link} ${typography.white100}`}
+            >
+              headphones
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={{
+                pathname: "/categories/CategoriesListed",
+                state: { id: "speakers" },
+              }}
+              className={`${typography.link} ${typography.white100}`}
+            >
+              speakers
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={{
+                pathname: "/categories/CategoriesListed",
+                state: { id: "earphones" },
+              }}
+              className={`${typography.link} ${typography.white100}`}
+            >
+              earphones
+            </Link>
+          </li>
+        </ul>
+
         
 
-        <div className={classes.mobileMenu} >
+        <div className={classes.cartMenu} >
            <CartIcon className={classes.cartIcon} onClick={openCart} />
     
           

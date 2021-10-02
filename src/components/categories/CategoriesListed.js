@@ -1,11 +1,8 @@
 import classes from "./CategoriesListed.module.css";
 import data from "../../data.json";
 import { useEffect, useState } from "react";
-import Categories from "./Categories";
 import { useLocation } from "react-router";
-import { Link } from "react-router-dom";
 import typography from "../../components/typography.module.css";
-import linkStyle from "../../components/LinkStyles.module.css";
 import Menu from "../menu/Menu";
 import BestGear from "../bestGear/BestGear";
 import ProductOverview from "../productOverview/productOverview";
@@ -19,18 +16,17 @@ function CategoriesListed(props) {
 
   const [dataToDisplay, setDataToDisplay] = useState([]);
 
-  const filterCategory = () => {
-    const categoryToDisplay = data.filter(
-      (array) => array.category === `${category}`
-    );
 
-    console.log(categoryToDisplay);
-
-    setDataToDisplay(categoryToDisplay);
-  };
 
   useEffect(() => {
+    const filterCategory = () => {
+      const categoryToDisplay = data.filter(
+        (array) => array.category === `${category}`
+      );
+      setDataToDisplay(categoryToDisplay);
+    };
     filterCategory();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [category]);
 
   return (
@@ -42,9 +38,8 @@ function CategoriesListed(props) {
       </h2>
 
       {dataToDisplay.map((data, index) => (
-        <div>
+        <div key={data.id}>
           <ProductOverview
-            key={data.id}
             productID={data.id}
             isProductOverview={true}
           />

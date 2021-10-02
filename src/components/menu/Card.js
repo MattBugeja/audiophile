@@ -3,11 +3,9 @@ import { Link } from "react-router-dom";
 import typography from "../../components/typography.module.css";
 
 function Card(props) {
-  const id = props.id;
-
   return (
     <div className={`${typography.alignCenter} ${classes.card}`}>
-      <img className={classes.image} src={props.source} />
+      <img className={classes.image} src={props.source} alt="" />
 
 
       <h6 className={classes.productName}>{props.productName}</h6>

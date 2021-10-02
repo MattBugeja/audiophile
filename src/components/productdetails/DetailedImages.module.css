@@ -1,13 +1,13 @@
 .container {
-  width: 327px;
   margin: 0 auto;
+  width: 327px;
 }
 
 .imageHalfContainer {
-  height: 174px;
   border-radius: 10px;
-  overflow: hidden;
+  height: 174px;
   margin-bottom: 24px;
+  overflow: hidden;
 }
 
 .image {
@@ -16,19 +16,18 @@
 }
 
 .imageFullContainer {
-  height: 368px;
   border-radius: 10px;
-  overflow: hidden;
+  height: 368px;
   margin-bottom: 24px;
+  overflow: hidden;
 }
 
 @media (min-width: 760px) {
   .container {
+    column-gap: 24px;
     display: flex;
     flex-direction: row;
-    column-gap: 24px;
     width: 689px;
-    margin: 0 auto;
   }
 
   .imageHalfContainer {
@@ -49,11 +48,8 @@
 
 @media (min-width: 1400px) {
   .container {
-    width: 1110px;
-    display: flex;
-    flex-direction: row;
-    column-gap: 24px;
     margin: 0 auto;
+    width: 1110px;
   }
 
   .imageHalfContainer {
@@ -68,8 +64,6 @@
   }
 
   .halfImages {
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
   }
 }

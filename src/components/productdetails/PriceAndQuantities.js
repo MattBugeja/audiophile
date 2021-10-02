@@ -1,6 +1,6 @@
 import data from "../../data.json";
 import classes from "./PriceAndQuantities.module.css";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import typography from "../../components/typography.module.css";
 
 function PriceAndQuantities(props) {

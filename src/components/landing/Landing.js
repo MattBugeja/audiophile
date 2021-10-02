@@ -1,7 +1,7 @@
 import classes from "./Landing.module.css";
 import { Link } from "react-router-dom";
-import typography from "../../../components/typography.module.css"
-import linkStyle from "../../../components/LinkStyles.module.css"
+import typography from "../../components/typography.module.css"
+import linkStyle from "../../components/LinkStyles.module.css"
 function Landing() {
   return (
 

@@ -4,7 +4,6 @@ import { useLocation } from "react-router";
 import { useState } from "react";
 import Thanks from "./ThanksModal";
 import OverlayMenu from "../overlay/OverlayMenu";
-import linkStyles from "../LinkStyles.module.css"
 import typography from "../typography.module.css"
 
 function Summary() {

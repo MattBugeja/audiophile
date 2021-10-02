@@ -21,7 +21,7 @@ function Thanks(props) {
     <div className={classes.container}>
       <div className={classes.icon}>
         {" "}
-        <img src={successIcon} />
+        <img src={successIcon} alt="" />
       </div>
       <h3 className={typography.alignLeft}> Thank you for your order</h3>
       <div className={`${classes.text} ${typography.textContent} ${typography.black50}`}>

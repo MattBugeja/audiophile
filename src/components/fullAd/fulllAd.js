@@ -1,8 +1,8 @@
 import classes from "./fullAd.module.css"
 
 import { Link } from "react-router-dom"
-import typography from "../../../components/typography.module.css"
-import linkStyle from "../../../components/LinkStyles.module.css"
+import typography from "../../components/typography.module.css"
+import linkStyle from "../../components/LinkStyles.module.css"
 import ImgSpeakerMobile from "./assets/ImgSpeaker-mobile.png"
 import ImgSpeakerTablet from "./assets/ImgSpeaker-tablet.png"
 import ImgSpeakerDesktop from "./assets/ImgSpeaker-desktop.png"
@@ -13,11 +13,9 @@ function FullAd(props){
 
         <div className={classes.container}> 
 
-        {/* <div className = {classes.background}> */}
-
         <div className={classes.imgContainer}>
 
-        <img className = {classes.imgSpeaker} src = {ImgSpeakerMobile} srcSet = {` ${ImgSpeakerMobile} 365w, ${ImgSpeakerTablet} 760w, ${ImgSpeakerDesktop} 1280w}`} />       
+        <img className = {classes.imgSpeaker} alt = "zx9 speaker" src = {ImgSpeakerMobile} srcSet = {` ${ImgSpeakerMobile} 764w, ${ImgSpeakerTablet} 1399w, ${ImgSpeakerDesktop} 1500w}`} />       
 
         </div>
 

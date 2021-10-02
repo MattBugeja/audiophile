@@ -1,7 +1,5 @@
 .container {
   padding: 75px 0;
-  
-
 }
 
 .quantityInBox {
@@ -21,7 +19,6 @@
 .features {
   margin: 48px auto;
   max-width: 327px;
-  
 }
 
 .title {
@@ -29,7 +26,7 @@
   width: 50%;
 }
 
-.title2 {
+.similarProductsTitle {
   margin: 78px 0 24px 0;
 }
 
@@ -39,20 +36,19 @@
   }
 
   .inTheBox {
+    align-items: flex-start;
     display: flex;
     flex-direction: row;
-
-    justify-content: start;
-    align-items: flex-start;
+    justify-content: flex-start;
     margin-top: 60px;
   }
 
   .inTheBox ul {
-    padding: 0;
-    margin: 0;
     font-size: 0;
+    margin: 0;
+    padding: 0;
   }
-  .others {
+  .similarProducts {
     max-width: 689px;
     display: flex;
     flex-direction: row;
@@ -60,39 +56,11 @@
     margin: 0 auto;
   }
 
-  .features{max-width: 689px;}
-}
-
-
-@media (min-width: 760px) {
-  .title {
-    margin: 0;
-  }
-
-  .inTheBox {
-    display: flex;
-    flex-direction: row;
-
-    justify-content: start;
-    align-items: flex-start;
-    margin-top: 60px;
-  }
-
-  .inTheBox ul {
-    padding: 0;
-    margin: 0;
-    font-size: 0;
-  }
-  .others {
+  .features {
     max-width: 689px;
-    display: flex;
-    flex-direction: row;
-    column-gap: 24px;
-    margin: 0 auto;
   }
-
-  .features{max-width: 689px;}
 }
+
 
 
 @media (min-width: 1400px) {
@@ -102,11 +70,7 @@
   }
 
   .inTheBox {
-    /* display: flex; */
     flex-direction: column;
-
-    /* justify-content: start; */
-    /* align-items: flex-start; */
     margin: 0 auto;
   }
 
@@ -115,24 +79,21 @@
     margin: 0;
     font-size: 0;
     width: 350px;
-    /* text-align: center; */
   }
-  .others {
+  .similarProducts {
     max-width: 1110px;
     width: 1110px;
-    display: flex;
-    flex-direction: row;
     column-gap: 0;
-    margin: 0 auto;
     justify-content: space-between;
   }
 
-  .features{max-width: 1110px;
-  display: flex;
-column-gap: 50px;}
+  .features {
+    max-width: 1110px;
+    display: flex;
+    column-gap: 50px;
+  }
 
-  .textContent{
-width: 635px;
-
+  .textContent {
+    width: 635px;
   }
 }

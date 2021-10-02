@@ -1,20 +1,20 @@
 label {
   display: block;
-  margin-top: 12px;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: -0.021;
+  margin-top: 12px;
   text-transform: none;
 }
 
 input {
-  width: 100%;
-  height: 56px;
-  margin-top: 8px;
-  margin-bottom: 24px;
-  border: 1px solid #cfcfcf;
   border-radius: 5px;
+  border: 1px solid #cfcfcf;
+  height: 56px;
+  margin-bottom: 24px;
+  margin-top: 8px;
   padding-left: 15px;
+  width: 100%;
 }
 
 .container {
@@ -23,14 +23,14 @@ input {
 }
 
 .btn {
-  width: 100%;
-  height: 56px;
-  margin-bottom: 24px;
   background-color: transparent;
   border: 1px solid #cfcfcf;
   font-size: 14px;
   font-weight: bold;
+  height: 56px;
   letter-spacing: -0.25px;
+  margin-bottom: 24px;
+  width: 100%;
 }
 
 .cashOnDelivery {
@@ -39,11 +39,11 @@ input {
 
 .formStructure {
   background-color: white;
-  padding: 24px;
   border-radius: 5px;
+  margin: 0 auto;
   margin: 24px;
   max-width: 365px;
-  margin: 0 auto;
+  padding: 24px;
 }
 
 .title {
@@ -53,11 +53,11 @@ input {
 }
 
 .sectionName {
+  color: #d87d4a;
   font-size: 13px;
   font-weight: bold;
-  color: #d87d4a;
-  line-height: 25px;
   letter-spacing: 0.93px;
+  line-height: 25px;
   margin-top: 24px;
 }
 
@@ -65,14 +65,14 @@ input {
   font-size: 12px;
   font-weight: bold;
   letter-spacing: -0.021;
-  text-transform: none;
   margin: 12px 0;
+  text-transform: none;
 }
 
 @media (min-width: 760px) {
   .row {
-    display: flex;
     column-gap: 20px;
+    display: flex;
   }
 
   .entry {
@@ -80,9 +80,9 @@ input {
   }
 
   .wrap {
+    column-gap: 15px;
     display: flex;
     flex-wrap: wrap;
-    column-gap: 15px;
   }
 
   .btn {
@@ -110,11 +110,11 @@ input {
     width: 309px;
   }
 
-  .wrap {
+  /* .wrap {
     display: flex;
     flex-wrap: wrap;
     column-gap: 15px;
-  }
+  } */
 
   .btn {
     width: 309px;
@@ -129,13 +129,12 @@ input {
   }
 
   .desktopRow {
-    display: flex;
-
-    flex-direction: row;
     column-gap: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 100px auto;
     max-width: 1110px;
     width: 1110px;
-    margin: 0 auto;
-    justify-content: space-between;
   }
 }

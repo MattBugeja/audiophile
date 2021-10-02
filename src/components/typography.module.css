@@ -19,13 +19,6 @@ body {
   text-transform: uppercase;
 }
 
-.textContent {
-  font-size: 15px;
-  font-weight: 200;
-  text-transform: none;
-  line-height: 25px;
-}
-
 h1 {
   font-size: 3.5rem;
   letter-spacing: 0.125rem;
@@ -47,14 +40,13 @@ h3 {
 h4 {
   font-size: 1.74rem;
   letter-spacing: 2px;
-  /* line-height: 2.375rem; */
 }
 
 h5 {
-    font-size: 1.5rem;
-    letter-spacing: 0.1062rem;
-    line-height: 2.0625rem;
-  }
+  font-size: 1.5rem;
+  letter-spacing: 0.1062rem;
+  line-height: 2.0625rem;
+}
 
 h6 {
   font-size: 18px;
@@ -62,18 +54,6 @@ h6 {
   line-height: 44px;
   font-weight: bold;
 }
-
-.overline {
-  font-size: 14px;
-  letter-spacing: 10px;
-}
-
-/* .subTitle {
-    font-size: 0.8125rem;
-    letter-spacing: 0.0625rem;
-    line-height: 1.5625rem;
-    color: #D87D4A;
-  } */
 
 .link {
   font-size: 13px;
@@ -83,8 +63,16 @@ h6 {
   text-align: center;
 }
 
-.white100 {
-  color: white;
+.overline {
+  font-size: 14px;
+  letter-spacing: 10px;
+}
+
+.textContent {
+  font-size: 15px;
+  font-weight: 200;
+  text-transform: none;
+  line-height: 25px;
 }
 
 .white75 {
@@ -95,12 +83,16 @@ h6 {
   color: hsla(0, 0%, 100%, 0.5);
 }
 
-.black {
-  color: hsl(0, 0%, 0%);
+.white100 {
+  color: white;
 }
 
 .black50 {
   color: hsla(0, 0%, 0%, 0.5);
+}
+
+.black100 {
+  color: hsl(0, 0%, 0%);
 }
 
 .orange {
@@ -119,7 +111,8 @@ h6 {
   text-align: right;
 }
 
-
 @media (min-width: 1400px) {
-  .alignDesktopLeft{text-align: left;}
+  .alignDesktopLeft {
+    text-align: left;
+  }
 }

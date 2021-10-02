@@ -1,29 +1,29 @@
 .container {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 327px;
-  padding: 24px 0;
   background-color: #d87d4a;
   background-image: url("./assets/pattern-circles.svg");
-  background-repeat: no-repeat;
   background-position: -115px -110px;
+  background-repeat: no-repeat;
   background-size: 170%;
-  height: 600px;
-  margin: 48px auto;
   border-radius: 10px;
+  height: 600px;
+  left: 0;
+  margin: 48px auto;
+  padding: 24px 0;
+  position: relative;
+  top: 0;
+  width: 327px;
 }
 
 .imgContainer {
+  height: 207px;
   margin: 50px auto 0 auto;
   width: 172.3px;
-  height: 207px;
 }
 
 .imgSpeaker {
-  width: 100%;
   height: 100%;
   margin: 0 auto;
+  width: 100%;
 }
 
 .content {
@@ -32,48 +32,43 @@
 }
 
 .productName {
-  width: 50%;
   margin: 0 auto;
   padding: 250px auto 0 auto;
+  width: 50%;
 }
 
 .description {
-  width: 280px;
-  text-transform: none;
+  margin-bottom: 20px;
   margin: 0 auto;
   padding-top: 24px;
-  margin-bottom: 20px;
+  text-transform: none;
+  width: 280px;
 }
 
 @media (min-width: 760px) {
   .container {
-    /* background-image: url("./assets/pattern-circles.svg"); */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
     background-position: 50% -250px;
     background-size: 125%;
-    width: 689px;
     height: 720px;
-    /* margin: 48px auto; */
-    /* border-radius: 10px; */
+    width: 689px;
   }
 
   .imgContainer {
+    height: 237px;
     margin: 10px auto;
     width: 197.5px;
-    height: 237px;
   }
 
   .imgSpeaker {
-    width: 100%;
     height: 100%;
     margin: 0 auto;
+    width: 100%;
   }
 
   .productName {
-    width: 40%;
     margin: 0 auto;
     padding: 250px auto 0 auto;
+    width: 40%;
   }
 
   .content {
@@ -83,46 +78,46 @@
 
 @media (min-width: 1400px) {
   .container {
-    display: flex;
     align-items: center;
     background-position: -160% -60px;
     background-size: 90%;
-    width: 1110px;
+    display: flex;
     height: 560px;
     overflow: hidden;
     padding-top: 115px;
+    width: 1110px;
   }
 
   .imgContainer {
+    height: 493px;
     margin: 55px 100px;
     width: 410px;
-    height: 493px;
   }
 
   .imgSpeaker {
-    width: 100%;
     height: 100%;
     margin: 0 auto;
+    width: 100%;
   }
 
   .productName {
-    width: 40%;
     margin: 0;
     padding: 0;
     text-align: left;
+    width: 40%;
   }
 
   .content {
-    margin: 0px auto 0 auto;
-    width: 349px;
     height: 493px;
+    margin: 0px auto 0 auto;
     padding-top: 20px;
+    width: 349px;
   }
   .description {
-    width: 350px;
-    text-transform: none;
+    margin-bottom: 20px;
     margin: 0;
     padding-top: 24px;
-    margin-bottom: 20px;
+    text-transform: none;
+    width: 350px;
   }
 }
