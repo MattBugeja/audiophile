@@ -28,7 +28,7 @@ function BestGear() {
         <p
           className={`${typography.textContent} ${typography.black50} ${typography.alignDesktopLeft}`}
         >
-          Located at the heart of New York City, Audiophile is the premier stor
+          Located at the heart of Waka Waka City, Audiophile is the premier stor
           for high end headphones, earphones, speakers, and audio accessories.
           We have a large showroom and lucury demonstartion rooms available for
           you to browse and experience a wide range of our products. Stop by our

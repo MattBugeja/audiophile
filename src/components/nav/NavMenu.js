@@ -68,7 +68,7 @@ function NavMenu() {
                   pathname: "/categories/CategoriesListed/" + item,
                 }}
                 onClick={() => {
-                  window.location.href = `/categories/CategoriesListed/${item}`;
+                  window.location.reload()
                 }}
                 className={`${typography.link} ${typography.white100}`}
               >
