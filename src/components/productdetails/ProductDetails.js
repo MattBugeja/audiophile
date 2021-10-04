@@ -14,10 +14,6 @@ function ProductDetails(props) {
 
   const [productID] = useState(params.id);
 
-  useEffect(() => {
-    console.log(params);
-  });
-
   return (
     <div className={classes.container}>
       <ProductOverview
