@@ -4,7 +4,7 @@
   height: 500px;
   left: 50%;
   margin: 0 auto;
-  overflow:scroll;
+  overflow: scroll;
   padding: 32px;
   position: fixed;
   text-align: left;
@@ -22,22 +22,15 @@
   margin-bottom: 24px;
 }
 
-
-.background{
-  background-color: #F1F1F1;
+.background {
+  background-color: #f1f1f1;
   border-radius: 10px;
   overflow: hidden;
 }
 
-@media(min-width: 765px){
-
-  .container{
-
-height: 650px;
-width: 540px;
+@media (min-width: 765px) {
+  .container {
+    height: 650px;
+    width: 540px;
   }
-
-
-
-
 }

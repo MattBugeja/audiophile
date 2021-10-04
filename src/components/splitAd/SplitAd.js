@@ -12,37 +12,44 @@ function SplitAd() {
       <div className={classes.topAd}>
         <h4 className={classes.productName}>zx7 Speaker</h4>
 
-        <div className={`${linkStyle.link} ${linkStyle.transparent} ${classes.speakerLinkPositioning}`}>
+       
           <Link
             to={{
-              pathname: "/productdetails/ProductDetails",
-              state: { id: 5 },
+              pathname: "/productdetails/ProductDetails/5",
             }}
             className={`${typography.link} ${typography.black100}`}
           >
-            see product
+             <div
+          className={`${linkStyle.link} ${linkStyle.transparent} ${classes.speakerLinkPositioning}`}
+        > see product </div>
           </Link>
-        </div>
+        
       </div>
 
       <div className={classes.bottomAd}>
         <div className={classes.imgContainer}>
-          <img className={classes.bottomImg} src={ImgEarphonesTablet} srcSet = {`${ImgEarphonesMobile} 759w, ${ImgEarphonesTablet} 1399w, ${ImgEarphonesDesktop} 1500w`} alt="" />
+          <img
+            className={classes.bottomImg}
+            src={ImgEarphonesTablet}
+            srcSet={`${ImgEarphonesMobile} 759w, ${ImgEarphonesTablet} 1399w, ${ImgEarphonesDesktop} 1500w`}
+            alt=""
+          />
         </div>
 
         <div className={classes.greyBkGround}>
           <h4 className={classes.bottomAdText}>yx1 earphones</h4>
-          <div className={`${linkStyle.link} ${linkStyle.transparent} ${classes.linkPositioning}`}>
+         
             <Link
               to={{
-                pathname: "/productdetails/ProductDetails",
-                state: { id: 0 },
+                pathname: "/productdetails/ProductDetails/0",
               }}
               className={`${typography.link} ${typography.black100}`}
-            >
-              see product
+            > <div
+            className={`${linkStyle.link} ${linkStyle.transparent} ${classes.linkPositioning}`}
+          >   see product </div>
+            
             </Link>
-          </div>
+        
         </div>
       </div>
     </div>

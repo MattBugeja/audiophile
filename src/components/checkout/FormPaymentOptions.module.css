@@ -1,0 +1,36 @@
+
+.sectionName {
+  color: #d87d4a;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.93px;
+  line-height: 25px;
+  margin-top: 24px;
+}
+
+.subSection {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: -0.021;
+  margin: 12px 0;
+  text-transform: none;
+}
+
+
+.row {
+display: flex;
+column-gap: 20px;
+}
+
+.btn {
+    background-color: transparent;
+    border: 1px solid #cfcfcf;
+    font-size: 14px;
+    font-weight: bold;
+    height: 56px;
+    letter-spacing: -0.25px;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+  

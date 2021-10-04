@@ -27,7 +27,7 @@ function CartItem(props) {
   }
 
   useEffect(() => {
-    props.change();
+    props.detectChange();
     updateOrderAmt();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [counter]);
@@ -57,7 +57,7 @@ function CartItem(props) {
       </div>
 
       {!isSummary && (
-        <div className={classes.changeAmount}>
+        <div className={classes.changeQuantity}>
           <button className={classes.signButton} onClick={moveDown}>
             -
           </button>

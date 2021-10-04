@@ -41,11 +41,11 @@ function Cart(props) {
 
   return (
     <div className={`${typography.alignCenter} ${classes.cartContainer}`}>
-      <div className={typography.alignRight}>
+      <div className={classes.closeIcon}>
         <CloseIcon onClick={props.close} />
       </div>
 
-      <div className={classes.firstRow}>
+      <div className={classes.row}>
         <h6>cart ({numOfItems})</h6>
         <button
           className={`${typography.textContent} ${typography.black50} ${classes.removeBtn}`}
@@ -57,24 +57,25 @@ function Cart(props) {
 
       <CartItemsListed
         orderSummary={orderSummary}
-        change={detectChange}
+        detectChange={detectChange}
         total={total}
         isSummary={false}
       />
 
       {total > 0 && (
-        <div className={`${linkStyle.linkWide} ${linkStyle.orange}`}>
-          <Link
-            onClick={props.close}
-            className={`${typography.link} ${typography.white100}`}
-            to={{
-              pathname: "/checkout/Checkout",
-              state: { totalAmount: total },
-            }}
-          >
+        <Link
+          onClick={props.close}
+          className={`${typography.link} ${typography.white100}`}
+          to={{
+            pathname: "/checkout/Checkout",
+            state: { totalAmount: total },
+          }}
+        >
+          <div className={`${linkStyle.linkWide} ${linkStyle.orange}`}>
+            {" "}
             Checkout
-          </Link>
-        </div>
+          </div>
+        </Link>
       )}
     </div>
   );

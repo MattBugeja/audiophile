@@ -14,7 +14,7 @@ function CartItemsListed(props) {
         <div key={index}>
           <CartItem
             orderSummary={orderSummary[item]}
-            change={props.change}
+            detectChange={props.detectChange}
             isSummary={props.isSummary}
           />
         </div>
@@ -23,7 +23,7 @@ function CartItemsListed(props) {
       {!isCheckedOut ? (
         <div className={classes.orderTotal}>
           <p
-            className={`${classes.total} ${typography.textContent} ${typography.black50}`}
+            className={`${classes.totalText} ${typography.textContent} ${typography.black50}`}
           >
             total
           </p>

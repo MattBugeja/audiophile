@@ -8,18 +8,17 @@ import { ReactComponent as CartIcon } from "./assets/icon-cart.svg";
 import OverlayMenu from "../overlay/OverlayMenu";
 import classes from "./NavMenu.module.css";
 import Menu from "../menu/Menu";
-import typography from "../../components/typography.module.css"
-// import linkStyle from "/../../components/LinkStyles.module.css"
+import typography from "../../components/typography.module.css";
 
 import Cart from "../cart/Cart";
 function NavMenu() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const openMobileMenu = () => setMenuIsOpen(!menuIsOpen);
   const closeMobileMenu = () => setMenuIsOpen(false);
-
   const [cartIsOpen, setCartIsOpen] = useState(false);
   const openCart = () => setCartIsOpen(true);
-  const closeCart = () => setCartIsOpen(false); 
+  const closeCart = () => setCartIsOpen(false);
+  const menuItems = ["headphones", "speakers", "earphones"];
 
   return (
     <header className={classes.header}>
@@ -41,9 +40,8 @@ function NavMenu() {
           }
         >
           <li className={classes.option} onClick={closeMobileMenu}>
-            <Menu/>
-                 </li>
-         
+            <Menu />
+          </li>
         </ul>
 
         <div className={classes.logoContainer}>
@@ -53,8 +51,7 @@ function NavMenu() {
           </Link>
         </div>
 
-
-        <ul className ={classes.navOptionsDesktop}>
+        <ul className={classes.navOptionsDesktop}>
           <li>
             <Link
               to={"/"}
@@ -63,57 +60,32 @@ function NavMenu() {
               Home
             </Link>
           </li>
-          <li>
-            <Link
-              to={{
-                pathname: "/categories/CategoriesListed",
-                state: { id: "headphones" },
-              }}
-              className={`${typography.link} ${typography.white100}`}
-            >
-              headphones
-            </Link>
-          </li>
-          <li>
-            <Link
-              to={{
-                pathname: "/categories/CategoriesListed",
-                state: { id: "speakers" },
-              }}
-              className={`${typography.link} ${typography.white100}`}
-            >
-              speakers
-            </Link>
-          </li>
-          <li>
-            <Link
-              to={{
-                pathname: "/categories/CategoriesListed",
-                state: { id: "earphones" },
-              }}
-              className={`${typography.link} ${typography.white100}`}
-            >
-              earphones
-            </Link>
-          </li>
+
+          {menuItems.map((item, index) => (
+            <li key={index}>
+              <Link
+                to={{
+                  pathname: "/categories/CategoriesListed/" + item,
+                }}
+                onClick={() => {
+                  window.location.href = `/categories/CategoriesListed/${item}`;
+                }}
+                className={`${typography.link} ${typography.white100}`}
+              >
+                {item}
+              </Link>
+            </li>
+          ))}
         </ul>
 
-        
+        <div className={classes.cartMenu}>
+          <CartIcon className={classes.cartIcon} onClick={openCart} />
 
-        <div className={classes.cartMenu} >
-           <CartIcon className={classes.cartIcon} onClick={openCart} />
-    
-          
           {cartIsOpen && <OverlayMenu />}
-          {cartIsOpen && <Cart close={closeCart}/>}
+          {cartIsOpen && <Cart close={closeCart} />}
         </div>
-
-
-      
-     
       </nav>
     </header>
-
   );
 }
 

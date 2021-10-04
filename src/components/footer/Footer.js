@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import typography from "../../components/typography.module.css";
 
 function Footer() {
+  const menuItems = ["headphones", "speakers", "earphones"];
+
   return (
     <footer className={classes.footer}>
       <hr />
@@ -26,39 +28,22 @@ function Footer() {
                 Home
               </Link>
             </li>
-            <li>
-              <Link
-                to={{
-                  pathname: "/categories/CategoriesListed",
-                  state: { id: "headphones" },
-                }}
-                className={`${typography.link} ${typography.white100}`}
-              >
-                headphones
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={{
-                  pathname: "/categories/CategoriesListed",
-                  state: { id: "speakers" },
-                }}
-                className={`${typography.link} ${typography.white100}`}
-              >
-                speakers
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={{
-                  pathname: "/categories/CategoriesListed",
-                  state: { id: "earphones" },
-                }}
-                className={`${typography.link} ${typography.white100}`}
-              >
-                earphones
-              </Link>
-            </li>
+
+            {menuItems.map((item, index) => (
+              <li key={index}>
+                <Link
+                  to={{
+                    pathname: `/categories/CategoriesListed/` + item,
+                  }}
+                  onClick={() => {
+                    window.location.href = `/categories/CategoriesListed/${item}`;
+                  }}
+                  className={`${typography.link} ${typography.white100}`}
+                >
+                  {item}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
 
@@ -78,8 +63,8 @@ function Footer() {
         </p>
 
         <div className={classes.socialMedia}>
-          <img src={FacebookIcon} alt = ""/> <img src={TwitterIcon} alt = "" />{" "}
-          <img src={InstagramIcon} alt = "" />{" "}
+          <img src={FacebookIcon} alt="" /> <img src={TwitterIcon} alt="" />{" "}
+          <img src={InstagramIcon} alt="" />{" "}
         </div>
       </div>
     </footer>

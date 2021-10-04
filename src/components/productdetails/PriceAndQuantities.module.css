@@ -1,42 +1,44 @@
 .orderRow {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-top: 15px;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 15px;
+}
 
-  .adjustQuantity {
-    display: flex;
-    flex-direction: row;
-  }
+.adjustQuantity {
+  display: flex;
+  flex-direction: row;
+}
 
-  .signButton {
-    border: none;
-    height: 48px;
-    width: 33px;
-  }
-
+.signButton {
+  border: none;
+  height: 48px;
+  width: 33px;
+}
 
 .addToCart {
-    background-color: #d87d4a;
-    border: none;
-    height: 48px;
-    margin-left: 20px;
-    width: 160px;
-  }
+  background-color: #d87d4a;
+  border: none;
+  height: 48px;
+  margin-left: 20px;
+  width: 160px;
+}
 
-  .quantity {
-    background-color: #f1f1f1;
-    border: none;
-    height: 48px;
-    padding-top: 15px;
-    text-align: center;
-    width: 33px;
-  }
+.addToCart:focus{
 
-  .container{
-    text-align: left;
+  background-color: #FBAF85;
+}
 
 
+.quantity {
+  background-color: #f1f1f1;
+  border: none;
+  height: 48px;
+  padding-top: 15px;
+  text-align: center;
+  max-width: 33px;
+}
 
-  }
+.container {
+  text-align: left;
+}

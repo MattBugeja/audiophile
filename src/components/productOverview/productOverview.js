@@ -20,7 +20,7 @@ function ProductOverview(props) {
   const detailedImgSource = {
     mobile: data[productID].image.mobile,
     tablet: data[productID].image.tablet,
-    desktop: data[productID].image.desktop
+    desktop: data[productID].image.desktop,
   };
 
   const [imgSource, setImgSource] = useState(overviewImgSource);
@@ -29,60 +29,88 @@ function ProductOverview(props) {
     isProductOverview
       ? setImgSource(overviewImgSource)
       : setImgSource(detailedImgSource);
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div>
-      <div className={isProductOverview ? `${classes.category}` : `${classes.categoryDetailed}`}>
-        <div className={isProductOverview ? `${classes.imgContainer}` : `${classes.imgContainerDetailed}`}>
-          
-            <img
+      <div
+        className={
+          isProductOverview
+            ? `${classes.category}`
+            : `${classes.categoryDetailed}`
+        }
+      >
+        <div
+          className={
+            isProductOverview
+              ? `${classes.imgContainer}`
+              : `${classes.imgContainerDetailed}`
+          }
+        >
+          <img
             className={classes.image}
-            src={window.location.origin + `${imgSource.mobile}`}
+            src={window.location.origin + `${imgSource.wide}`}
             srcSet={
               window.location.origin +
-              `${imgSource.mobile} 759w, ${imgSource.tablet} 1399w, ${imgSource.desktop} 1500w`
+              `${imgSource.mobile} 759w, ${imgSource.tablet} 1399w, ${imgSource.desktop} 1400w`
             }
             alt={""}
           />
         </div>
 
-        <div className={isProductOverview ? `${classes.textContainer}` : `${classes.textContainerDetailed}`}>
+        <div
+          className={
+            isProductOverview
+              ? `${classes.textContainer}`
+              : `${classes.textContainerDetailed}`
+          }
+        >
           {isNewProduct && (
             <div
-              className={`${typography.overline} ${typography.orange} ${isProductOverview ? `${classes.newProduct}` : `${classes.newProductDetailed}`}`}
+              className={`${typography.overline} ${typography.orange} ${
+                isProductOverview
+                  ? `${classes.newProduct}`
+                  : `${classes.newProductDetailed}`
+              }`}
             >
               new product
             </div>
           )}
-          <h2 className={` ${typography.alignCenter}  ${isProductOverview ? `${classes.productName}` : `${classes.productNameDetailed}`}`}>
+          <h2
+            className={` ${typography.alignCenter}  ${
+              isProductOverview
+                ? `${classes.productName}`
+                : `${classes.productNameDetailed}`
+            }`}
+          >
             {data[productID].name}
           </h2>
 
-          <p className={`${typography.textContent} ${typography.black50} ${classes.textContentSpacing}`}>
+          <p
+            className={`${typography.textContent} ${typography.black50} ${classes.textContentSpacing}`}
+          >
             {data[productID].description}
           </p>
 
-          {isProductOverview && 
-
-          (<div className={`${linkStyle.link} ${linkStyle.orange} ${linkStyle.linkLeft}`}>
-            <Link
-              // key={index}
-              to={{
-                pathname: "/productdetails/ProductDetails",
-                state: { id: data[productID].id },
-              }}
-
-              className={`${typography.link} ${typography.white100}`}
+          {isProductOverview && (
+            <div
+              className={`${linkStyle.link} ${linkStyle.orange} ${linkStyle.linkLeft}`}
             >
-              see product
-            </Link>
-          </div>)}
+              <Link
+           
+                to={{
+                  pathname:
+                    "/productdetails/ProductDetails/" + data[productID].id,
+                }}
+                className={`${typography.link} ${typography.white100}`}
+              >
+                see product
+              </Link>
+            </div>
+          )}
 
-          {!isProductOverview && <PriceAndQuantities productID = {productID}/>}
-
-         
+          {!isProductOverview && <PriceAndQuantities productID={productID} />}
         </div>
       </div>
     </div>

@@ -9,7 +9,6 @@
   width: 327px;
 }
 
-
 .productName {
   margin: 0 0 32px 16px;
 }
@@ -53,7 +52,7 @@
     background: url("./assets/imgSpeaker-tablet.jpg");
     height: 320px;
     width: 689px;
-    }
+  }
 
   .speakerLinkPositioning {
     margin: 25px 50px;
@@ -67,7 +66,6 @@
     margin: 0 auto;
     padding-top: 24px;
     width: 689px;
-
   }
 
   .imgContainer {
@@ -82,7 +80,6 @@
     margin: 0;
     padding: 87px 24px;
     width: 339px;
-   
   }
   .bottomImg {
     height: 100%;
@@ -109,13 +106,10 @@
   .imgContainer {
     height: 320px;
     width: 540px;
-   }
+  }
 
   .greyBkGround {
     height: 320px;
     width: 540px;
   }
-
-
-
 }

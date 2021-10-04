@@ -134,8 +134,8 @@
   }
 
   .categoryDetailed {
-    width: 1110px;
-    padding: 150px 0px 0px 0px;
+    width: 1100px;
+    padding: 50px 0px 0px 0px;
     flex-direction: row;
     margin: 0 auto;
     column-gap: 50px;
@@ -145,6 +145,7 @@
     height: 560px;
     margin: 0 auto;
     width: 540px;
+    max-width: 540px;
   }
 
   .productNameDetailed {
@@ -159,18 +160,23 @@
 
   .textContainer {
     margin: 40px auto;
-    max-width: 620px;
+    max-width: 400px;
     text-align: left;
   }
 
   .category {
     flex-direction: row;
     padding: 50px 24px 0px 24px;
+    width: 1100px;
+    margin: 0 auto;
+    padding: 36px 0;
   }
 
   .imgContainer {
     height: 560px;
+    width: 540px;
     max-width: 540px;
+    padding: 0;
   }
 
   .productName {

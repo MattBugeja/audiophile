@@ -1,91 +1,94 @@
 import classes from "./Checkout.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Summary from "./Summary";
+import useForm from "../../utilities/UseForm";
+import ValidateInfo from "../../utilities/ValidateInfo";
+import typography from "../../components/typography.module.css";
+import Thanks from "./ThanksModal";
+import { useLocation } from "react-router";
+import OverlayModal from "../overlay/OverlayModal";
+import FormEntries from "./FormEntries";
+import FormPaymentOptions from "./FormPaymentOptions";
 
 function Checkout() {
-  const billingDetails = ["Name", "Email Address", "Phone Number"];
-  const shippingInfo = ["Zip Code", "City", "Country"];
-  const emoneyDetails = ["e-money Number", "e-money PIN"];
-  const [isEmoney, setIsEmoney] = useState(false);
-  const [isCash, setIsCash] = useState(false);
+  const { handleChange, values, handleSubmit, errors, numOfErrors } =
+    useForm(ValidateInfo);
+  const [orderPlaced, setOrderPlaced] = useState(false);
+  const [orderSubmitted, setOrderSubmitted] = useState(false);
+  const getOrderSummary = localStorage.getItem("orderSummary");
+  const orderSummary = JSON.parse(getOrderSummary);
+  const location = useLocation();
+  const { totalAmount } = location.state;
 
-  function usingEmoney() {
-    setIsEmoney(true);
-    setIsCash(false);
+  function doesNothing() {}
+  function submitted() {
+    handleSubmit();
+    setOrderSubmitted(true);
   }
 
-  function payingCash() {
-    setIsEmoney(false);
-    setIsCash(true);
-  }
+  useEffect(() => {
+    if (orderSubmitted && numOfErrors === 0) {
+      setOrderPlaced(true);
+    }
+    return function cleanup() {
+      setOrderSubmitted(false);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [orderSubmitted]);
 
   return (
     <div className={classes.container}>
-      <div className={classes.desktopRow}>
-        <div className={classes.formStructure}>
-          <h1 className={classes.title}>Checkout</h1>
-          <h2 className={classes.sectionName}>Billing Details</h2>
-
-          <form>
-            <div className={classes.wrap}>
-              {" "}
-              {billingDetails.map((detail, index) => (
-                <div className={classes.entry}>
-                  <label htmlFor={detail}>{detail}</label>
-                  <input type="text" name={detail} placeholder={detail} />
-                </div>
-              ))}
-            </div>
-
-            <h2 className={classes.sectionName}>Shipping Info</h2>
-            <label htmlFor={"address"}>{"Your Address"}</label>
-
-            <input type="text" name={"address"} placeholder={"Your Address"} />
-
-            <div className={classes.wrap}>
-              {shippingInfo.map((detail, index) => (
-                <div className={classes.entry}>
-                  <label htmlFor={detail}>{detail}</label>
-
-                  <input type="text" name={detail} placeholder={detail} />
-                </div>
-              ))}
-            </div>
-          </form>
-          <div className={classes.paymentOptions}>
-            <h2 className={classes.sectionName}>Payment Details</h2>{" "}
-            <h3 className={classes.subSection}>Payment Method</h3>
-            <div className={classes.row}>
-              <button onClick={usingEmoney} className={classes.btn}>
-                e-Money
-              </button>
-              <button onClick={payingCash} className={classes.btn}>
-                Cash on Delivery
-              </button>
-            </div>
-          </div>
-
-          {isEmoney && (
-            <div className={classes.row}>
-              {emoneyDetails.map((detail, index) => (
-                <div className={classes.emoneyDetail}>
-                  <label htmlFor={detail}>{detail}</label>
-
-                  <input type="text" name={detail} placeholder={detail} />
-                </div>
-              ))}
-            </div>
+      <div className={classes.formStructure}>
+        <h1 className={classes.title}>Checkout</h1>
+        <h2 className={classes.sectionName}>Billing Details</h2>
+        <form>
+          <FormEntries
+            array={"billing details"}
+            values={values}
+            errors={errors}
+            onChange={handleChange}
+          />
+          <h2 className={classes.sectionName}>Shipping Info</h2>
+          <label htmlFor={"address"}>{"Your Address"}</label>
+          <input
+            type="text"
+            name={"address"}
+            placeholder={"Enter your Address"}
+            value={values.address}
+            onChange={handleChange}
+          />
+          {errors.address && (
+            <p className={classes.errorMessage}>{errors.address}</p>
           )}
+          <FormEntries
+            array={"shipping details"}
+            values={values}
+            errors={errors}
+            onChange={handleChange}
+          />
+        </form>
 
-          {isCash && (
-            <div className={classes.cashOnDelivery}>
-              <h1>payment due on Delivery</h1>
-            </div>
-          )}
-        </div>
-
+        <FormPaymentOptions />
         <Summary />
+
+        <button
+          onClick={submitted}
+          className={` ${classes.submit} ${typography.link} ${typography.white100} `}
+        >
+          Continue and Pay{" "}
+        </button>
       </div>
+
+      {orderPlaced && <OverlayModal />}
+      {orderPlaced && (
+        <Thanks
+          orderSummary={orderSummary}
+          total={totalAmount}
+          isSummary={true}
+          isCheckedOut={true}
+          detectChange={doesNothing}
+        />
+      )}
     </div>
   );
 }

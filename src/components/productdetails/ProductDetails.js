@@ -1,19 +1,22 @@
 import classes from "./productDetails.module.css";
 import data from "../../data.json";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DetailedImages from "./DetailedImages";
 import Others from "./Others";
-import { useLocation } from "react-router";
+import { useParams } from "react-router";
 import typography from "../../components/typography.module.css";
 import Menu from "../menu/Menu";
 import BestGear from "../bestGear/BestGear";
 import ProductOverview from "../productOverview/productOverview";
 
 function ProductDetails(props) {
-  const location = useLocation();
-  const { id } = location.state;
+  let params = useParams();
 
-  const [productID] = useState(id);
+  const [productID] = useState(params.id);
+
+  useEffect(() => {
+    console.log(params);
+  });
 
   return (
     <div className={classes.container}>
@@ -22,12 +25,10 @@ function ProductDetails(props) {
         productID={productID}
         isProductOverview={false}
       />
-
       <div className={classes.productDetailsSection}>
         <div className={classes.features}>
           <div className={classes.textContent}>
             <h3 className={classes.title}>features</h3>
-
             <p
               className={`${typography.textContent} ${typography.alignLeft} ${typography.black50} `}
             >
@@ -59,7 +60,9 @@ function ProductDetails(props) {
         <DetailedImages productID={productID} />
       </div>
 
-      <h3 className={` ${typography.alignCenter} ${classes.similarProductsTitle}`}>
+      <h3
+        className={` ${typography.alignCenter} ${classes.similarProductsTitle}`}
+      >
         You may also like
       </h3>
 

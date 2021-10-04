@@ -1,4 +1,4 @@
-.firstRow {
+.row {
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -29,5 +29,9 @@
   text-decoration: underline;
 
 
+}
+
+.closeIcon{
+  text-align: right;
 }
 

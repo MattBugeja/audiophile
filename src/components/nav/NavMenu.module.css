@@ -3,7 +3,6 @@
   padding: 0;
 }
 
-
 .header {
   background-color: black;
   display: flex;
@@ -15,7 +14,7 @@
 }
 
 .logoNav {
-    height: 50px;
+  height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -30,17 +29,16 @@
 
 .navOptions {
   display: none;
-
 }
 
-.navOptionsDesktop{
+.navOptionsDesktop {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 430px;
 }
 
-.option{
+.option {
   display: none;
 }
 
@@ -53,17 +51,16 @@
 }
 
 @media only screen and (max-width: 1400px) {
-
-  .navOptionsDesktop{
-    display:none;
+  .navOptionsDesktop {
+    display: none;
   }
-  
+
   .header {
     left: 0;
     padding: 3rem 1rem 0rem 1rem;
     position: absolute;
     top: 0;
-   }
+  }
 
   .navOptions {
     display: flex;
@@ -92,18 +89,14 @@
   }
 
   .option {
-     height: 100%;
+    height: 100%;
     display: block;
     padding: 1rem 1rem;
-    width:100%
+    width: 100%;
   }
 
   .mobileMenu {
     display: block;
     width: fit-content;
   }
-
-
-
-
 }

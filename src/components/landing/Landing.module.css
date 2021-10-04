@@ -3,10 +3,11 @@
 }
 
 .background {
+  background: url("./assets/image-header-mobile.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background: url("./assets/image-header-mobile.jpg");
+
   height: 600px;
   margin: 0 auto;
   width: 375px;
@@ -36,9 +37,9 @@
 
 @media (min-width: 760px) {
   .background {
+    background: url("./assets/image-header-tablet.jpg");
     background-position: center;
     background-size: cover;
-    background: url("./assets/image-header-tablet.jpg");
     height: 729px;
     width: 768px;
   }
@@ -57,9 +58,9 @@
 
 @media (min-width: 1400px) {
   .background {
+    background: url("./assets/image-header-desktop.jpg");
     background-position: center;
     background-size: cover;
-    background: url("./assets/image-header-desktop.jpg");
     height: 729px;
     max-width: 1400px;
     width: 100%;
@@ -83,8 +84,7 @@
     padding: 0;
   }
 
-  .container{
-
+  .container {
     width: 100%;
   }
 }

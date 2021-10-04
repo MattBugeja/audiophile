@@ -1,0 +1,16 @@
+.errorMessage {
+  font-weight: bold;
+  color: red;
+}
+
+@media (min-width: 760px) {
+  .entry {
+    width: 309px;
+  }
+
+  .wrap {
+    column-gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

@@ -1,14 +1,8 @@
 import CartItemsListed from "../cart/CartItemsListed";
 import classes from "./Summary.module.css";
 import { useLocation } from "react-router";
-import { useState } from "react";
-import Thanks from "./ThanksModal";
-import OverlayMenu from "../overlay/OverlayMenu";
-import typography from "../typography.module.css"
 
-function Summary() {
-  const [orderPlaced, setOrderPlaced] = useState(false);
-
+function Summary(props) {
   const getOrderSummary = localStorage.getItem("orderSummary");
 
   const orderSummary = JSON.parse(getOrderSummary);
@@ -19,10 +13,6 @@ function Summary() {
 
   function doesNothing() {}
 
-  function orderHandler() {
-    setOrderPlaced(true);
-  }
-
   return (
     <div className={classes.container}>
       <h6 className={classes.title}>Summary</h6>
@@ -31,24 +21,8 @@ function Summary() {
         orderSummary={orderSummary}
         total={totalAmount}
         isSummary={true}
-        change={doesNothing}
+        detectChange={doesNothing}
       />
-
-      <button onClick={orderHandler} className={` ${classes.btn} ${typography.link} ${typography.white100} `}>
-        Continue and Pay{" "}
-      </button>
-
-      {orderPlaced && <OverlayMenu />}
-
-      {orderPlaced && (
-        <Thanks
-          orderSummary={orderSummary}
-          total={totalAmount}
-          isSummary={true}
-          isCheckedOut={true}
-          change={doesNothing}
-        />
-      )}
     </div>
   );
 }

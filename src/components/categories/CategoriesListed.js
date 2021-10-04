@@ -1,22 +1,18 @@
 import classes from "./CategoriesListed.module.css";
 import data from "../../data.json";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router";
+import { useParams } from "react-router";
 import typography from "../../components/typography.module.css";
 import Menu from "../menu/Menu";
 import BestGear from "../bestGear/BestGear";
 import ProductOverview from "../productOverview/productOverview";
 
-function CategoriesListed(props) {
-  const location = useLocation();
+function CategoriesListed() {
+  let params = useParams();
 
-  const { id } = location.state;
-
-  const [category] = useState(id);
+  const [category] = useState(params.id);
 
   const [dataToDisplay, setDataToDisplay] = useState([]);
-
-
 
   useEffect(() => {
     const filterCategory = () => {
@@ -39,10 +35,7 @@ function CategoriesListed(props) {
 
       {dataToDisplay.map((data, index) => (
         <div key={data.id}>
-          <ProductOverview
-            productID={data.id}
-            isProductOverview={true}
-          />
+          <ProductOverview productID={data.id} isProductOverview={true} />
         </div>
       ))}
 

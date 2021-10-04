@@ -53,12 +53,10 @@ function App() {
                 <Cart />
               </Route>
 
-              <Route path="/productdetails/">
-                <ProductDetails />
+              <Route path="/productdetails/ProductDetails/:id" component = {ProductDetails}>
               </Route>
 
-              <Route path="/categories/CategoriesListed">
-                <CategoriesListed />
+              <Route path="/categories/CategoriesListed/:id" component = {CategoriesListed} >
               </Route>
 
               <Route path="/">

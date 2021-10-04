@@ -1,22 +1,22 @@
 .orderTotal {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 15px;
-  align-items: center;  
-  }
-   
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
+  align-items: center;
+}
 
-  .total{text-transform: uppercase;}
+.totalText {
+  text-transform: uppercase;
+}
 
-  .checkedOutTotal{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 15px;
-  align-items: left;  
+.checkedOutTotal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 15px;
+  align-items: left;
   background-color: black;
   padding: 24px;
-  width: 100%
-
-  }
+  width: 100%;
+}
