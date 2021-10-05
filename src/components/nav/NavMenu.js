@@ -65,11 +65,12 @@ function NavMenu() {
             <li key={index}>
               <Link
                 to={{
-                  pathname: "/categories/CategoriesListed/" + item,
+                  pathname: `audiophile/categories/CategoriesListed/${item}/`,
                 }}
                 onClick={() => {
-                  window.location.reload()
-                }}
+                                   window.location.href = `/audiophile/categories/CategoriesListed/${item}/`;
+                  }
+               }
                 className={`${typography.link} ${typography.white100}`}
               >
                 {item}

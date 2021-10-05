@@ -94,9 +94,7 @@ function ProductOverview(props) {
           </p>
 
           {isProductOverview && (
-            <div
-              className={`${linkStyle.link} ${linkStyle.orange} ${linkStyle.linkLeft}`}
-            >
+          
               <Link
            
                 to={{
@@ -104,10 +102,12 @@ function ProductOverview(props) {
                     "/productdetails/ProductDetails/" + data[productID].id,
                 }}
                 className={`${typography.link} ${typography.white100}`}
-              >
-                see product
+              >  <div
+              className={`${linkStyle.link} ${linkStyle.orange} ${linkStyle.linkLeft}`}
+            >
+                see product </div>
               </Link>
-            </div>
+           
           )}
 
           {!isProductOverview && <PriceAndQuantities productID={productID} />}
