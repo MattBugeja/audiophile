@@ -8,6 +8,18 @@ function BestGear() {
   return (
     <div className={classes.container}>
       <div className={classes.imgContainer}>
+
+
+      <picture>
+
+<source className={classes.image} media="(max-width: 760px)" srcSet={`${bestGearImgMobile}`}/>
+<source className={classes.image} media="(max-width: 1399px)" srcSet={`${bestGearImgTablet}`}/>
+<source className={classes.image} media="(max-width: 3000px)" srcSet={`${bestGearImgDesktop}`}/>
+<img className={classes.image} src={`${bestGearImgMobile}`}/>
+
+</picture>
+
+
         <img
           className={classes.bestGearImg}
           src={bestGearImgMobile}

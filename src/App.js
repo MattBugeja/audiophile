@@ -38,7 +38,7 @@ function App() {
 
   return (
     <CounterContext.Provider value={[setValue, readValue]}>
-      <Router basename = "/audiophile/">
+      <Router basename="/" >
         <div className="App">
 
      
@@ -56,7 +56,7 @@ function App() {
               <Route path="/productdetails/ProductDetails/:id" component = {ProductDetails}>
               </Route>
 
-              <Route path="/audiophile/categories/CategoriesListed/:id" component = {CategoriesListed} >
+              <Route path="/categories/CategoriesListed/:id" component = {CategoriesListed} >
               </Route>
 
               <Route exact path="/" component = {Home}>

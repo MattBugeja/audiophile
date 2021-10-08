@@ -62,10 +62,10 @@ function Footer() {
           Copyright 2021. All Rights Reserved
         </p>
 
-        <div className={classes.socialMedia}>
+        <p className={classes.socialMedia}>
           <img src={FacebookIcon} alt="" /> <img src={TwitterIcon} alt="" />{" "}
           <img src={InstagramIcon} alt="" />{" "}
-        </div>
+        </p>
       </div>
     </footer>
   );

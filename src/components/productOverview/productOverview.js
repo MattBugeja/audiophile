@@ -48,15 +48,27 @@ function ProductOverview(props) {
               : `${classes.imgContainerDetailed}`
           }
         >
-          <img
-            className={classes.image}
-            src={window.location.origin + `${imgSource.wide}`}
-            srcSet={
-              window.location.origin +
-              `${imgSource.mobile} 759w, ${imgSource.tablet} 1399w, ${imgSource.desktop} 1400w`
-            }
-            alt={""}
-          />
+          <picture>
+            <source
+              className={classes.image}
+              media="(max-width: 760px)"
+              srcset={window.location.origin + `${imgSource.mobile}`}
+            />
+            <source
+              className={classes.image}
+              media="(max-width: 1399px)"
+              srcset={window.location.origin + `${imgSource.tablet}`}
+            />
+            <source
+              className={classes.image}
+              media="(max-width: 3000px)"
+              srcset={window.location.origin + `${imgSource.desktop}`}
+            />
+            <img
+              className={classes.image}
+              src={window.location.origin + `${imgSource.mobile}`}
+            />
+          </picture>
         </div>
 
         <div
@@ -94,20 +106,20 @@ function ProductOverview(props) {
           </p>
 
           {isProductOverview && (
-          
-              <Link
-           
-                to={{
-                  pathname:
-                    "/productdetails/ProductDetails/" + data[productID].id,
-                }}
-                className={`${typography.link} ${typography.white100}`}
-              >  <div
-              className={`${linkStyle.link} ${linkStyle.orange} ${linkStyle.linkLeft}`}
+            <Link
+              to={{
+                pathname:
+                  "/productdetails/ProductDetails/" + data[productID].id,
+              }}
+              className={`${typography.link} ${typography.white100}`}
             >
-                see product </div>
-              </Link>
-           
+              {" "}
+              <div
+                className={`${linkStyle.link} ${linkStyle.orange} ${linkStyle.linkLeft}`}
+              >
+                see product{" "}
+              </div>
+            </Link>
           )}
 
           {!isProductOverview && <PriceAndQuantities productID={productID} />}

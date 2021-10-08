@@ -11,13 +11,18 @@ function FullAd(props) {
   return (
     <div className={classes.container}>
       <div className={classes.imgContainer}>
-        <img
-          className={classes.imgSpeaker}
-          alt="zx9 speaker"
-          src={ImgSpeakerMobile}
-          srcSet={` ${ImgSpeakerMobile} 764w, ${ImgSpeakerTablet} 1399w, ${ImgSpeakerDesktop} 1500w`}
-        />
-      </div>
+
+
+      <picture>
+
+<source className={classes.image} media="(max-width: 760px)" srcSet={`${ImgSpeakerMobile}`}/>
+<source className={classes.image} media="(max-width: 1399px)" srcSet={`${ImgSpeakerTablet}`}/>
+<source className={classes.image} media="(max-width: 3000px)" srcSet={`${ImgSpeakerDesktop}`}/>
+<img className={classes.image} src={`${ImgSpeakerMobile}`}/>
+
+</picture>
+
+    </div>
 
       <div className={`${typography.alignCenter} ${classes.content}`}>
         <h1 className={`${classes.productName} ${typography.white100}`}>

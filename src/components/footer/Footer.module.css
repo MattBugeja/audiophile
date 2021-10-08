@@ -7,7 +7,8 @@
 .grid {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-rows: 25% 25% 25%;
+  /* row-gap: 20px; */
   margin: 0 auto;
   max-width: 1400px;
   padding: 38px 38px 38px 38px;
@@ -17,8 +18,10 @@
   grid-column-end: end;
   grid-column-start: 1;
   margin: 0 auto;
-  padding: 50px 0;
+  /* padding: 50px 0; */
   width: fit-content;
+  align-self: center;
+  height: fit-content;
 }
 
 .footerMenu {
@@ -41,7 +44,7 @@
 .text {
   grid-column-end: end;
   grid-column-start: 1;
-  padding: 0 0 50px 0;
+  padding: 50px 0 50px 0;
   text-align: center;
 }
 
@@ -50,6 +53,9 @@
   grid-column-end: end;
   grid-column-start: 1;
   text-align: center;
+  width: 100%;
+  height: fit-content;
+  padding-top: 20px;
 }
 
 .socialMedia {
@@ -59,8 +65,9 @@
   grid-column-end: end;
   grid-column-start: 1;
   justify-content: center;
-  margin-top: 40px;
-  padding: 50px 0 40px 0;
+  margin-bottom: 40px;
+  padding: 40px 0 40px 0;
+
 }
 
 hr {
@@ -106,6 +113,7 @@ hr {
     justify-self: self-end;
     margin: 0;
     padding: 0;
+    height: 24px;
   }
 
   hr {

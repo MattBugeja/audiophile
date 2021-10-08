@@ -11,12 +11,16 @@ function Others(props) {
   return (
     <div className={classes.othersSection}>
       <div className={classes.imageContainer}>
-        <img
-          className={classes.image}
-          src={props.imgSrcMobile}
-          srcSet={`${props.imgSrcMobile} 759w, ${props.imgSrcTablet} 1399w, ${props.imgSrcDesktop} 1500w`}
-          alt=""
-        />
+
+    <picture>
+
+  <source className={classes.image} media="(max-width: 760px)" srcset={`${props.imgSrcMobile}`}/>
+  <source className={classes.image} media="(max-width: 1399px)" srcset={`${props.imgSrcTablet}`}/>
+  <source className={classes.image} media="(max-width: 3000px)" srcset={`${props.imgSrcDesktop}`}/>
+  <img className={classes.image} src={`${props.imgSrcMobile}`}/>
+
+  </picture>
+
       </div>
 
       <h5 className={`${typography.alignCenter} ${classes.productName}`}>
