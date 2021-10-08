@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ScrollToTop } from "react-router-scroll-to-top";
-import { useState,} from "react";
+import { useState } from "react";
 import Cart from "./components/cart/Cart";
 import CategoriesListed from "./components/categories/CategoriesListed";
 import Checkout from "./components/checkout/Checkout";
@@ -38,32 +38,23 @@ function App() {
 
   return (
     <CounterContext.Provider value={[setValue, readValue]}>
-      <Router basename="/" >
+      <Router basename="/">
         <div className="App">
-
-     
           <ScrollToTop>
             <NavMenu />
             <Switch>
-              <Route exact path="/checkout/Checkout">
+              <Route exact path="/checkout">
                 <Checkout />
               </Route>
 
-              <Route path="/cart/Cart">
-                <Cart />
-              </Route>
+              <Route path="/product/:id" component={ProductDetails}></Route>
 
-              <Route path="/productdetails/ProductDetails/:id" component = {ProductDetails}>
-              </Route>
+              <Route path="/category:id" component={CategoriesListed}></Route>
 
-              <Route path="/categories/CategoriesListed/:id" component = {CategoriesListed} >
-              </Route>
-
-              <Route exact path="/" component = {Home}>
-              </Route>
+              <Route exact path="/" component={Home}></Route>
             </Switch>
           </ScrollToTop>
-    
+
           <Footer />
         </div>
       </Router>

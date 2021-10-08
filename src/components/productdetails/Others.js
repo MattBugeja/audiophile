@@ -14,9 +14,9 @@ function Others(props) {
 
     <picture>
 
-  <source className={classes.image} media="(max-width: 760px)" srcset={`${props.imgSrcMobile}`}/>
-  <source className={classes.image} media="(max-width: 1399px)" srcset={`${props.imgSrcTablet}`}/>
-  <source className={classes.image} media="(max-width: 3000px)" srcset={`${props.imgSrcDesktop}`}/>
+  <source className={classes.image} media="(max-width: 760px)" srcSet={`${props.imgSrcMobile}`}/>
+  <source className={classes.image} media="(max-width: 1399px)" srcSet={`${props.imgSrcTablet}`}/>
+  <source className={classes.image} media="(max-width: 3000px)" srcSet={`${props.imgSrcDesktop}`}/>
   <img className={classes.image} src={`${props.imgSrcMobile}`}/>
 
   </picture>

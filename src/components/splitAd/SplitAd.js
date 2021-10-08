@@ -28,12 +28,30 @@ function SplitAd() {
 
       <div className={classes.bottomAd}>
         <div className={classes.imgContainer}>
-          <img
-            className={classes.bottomImg}
-            src={ImgEarphonesTablet}
-            srcSet={`${ImgEarphonesMobile} 759w, ${ImgEarphonesTablet} 1399w, ${ImgEarphonesDesktop} 1500w`}
-            alt=""
-          />
+
+
+        <picture>
+            <source
+              className={classes.image}
+              media="(max-width: 760px)"
+              srcSet={ImgEarphonesMobile}
+            />
+            <source
+              className={classes.image}
+              media="(max-width: 1399px)"
+              srcSet={ImgEarphonesTablet}
+            />
+            <source
+              className={classes.image}
+              media="(max-width: 3000px)"
+              srcSet={ImgEarphonesDesktop}
+            />
+            <img
+              className={classes.image}
+              src={ImgEarphonesMobile}
+            />
+          </picture>
+
         </div>
 
         <div className={classes.greyBkGround}>
@@ -41,7 +59,7 @@ function SplitAd() {
          
             <Link
               to={{
-                pathname: "/productdetails/ProductDetails/0",
+                pathname: "/product/0",
               }}
               className={`${typography.link} ${typography.black100}`}
             > <div

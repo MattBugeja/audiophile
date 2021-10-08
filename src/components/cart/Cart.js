@@ -67,7 +67,7 @@ function Cart(props) {
           onClick={props.close}
           className={`${typography.link} ${typography.white100}`}
           to={{
-            pathname: "/checkout/Checkout",
+            pathname: "/checkout/",
             state: { totalAmount: total },
           }}
         >

@@ -36,7 +36,7 @@ function FullAd(props) {
         </p>
 
         <Link
-          to={{ pathname: "/productdetails/ProductDetails/5" }}
+          to={{ pathname: "/product/5" }}
           className={`${typography.link} ${typography.white100}`}
         >
           {" "}

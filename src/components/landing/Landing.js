@@ -26,7 +26,7 @@ function Landing() {
           </p>
 
           <Link
-            to={{ pathname: "/productdetails/ProductDetails/1" }}
+            to={{ pathname: "/product/1" }}
             className={`${typography.link} ${typography.white100}`}
           >
             <div

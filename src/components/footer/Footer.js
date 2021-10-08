@@ -33,10 +33,10 @@ function Footer() {
               <li key={index}>
                 <Link
                   to={{
-                    pathname: `/categories/CategoriesListed/` + item,
+                    pathname: `/category/` + item,
                   }}
                   onClick={() => {
-                    window.location.href = `/categories/CategoriesListed/${item}`;
+                    window.location.href = `/category/${item}`;
                   }}
                   className={`${typography.link} ${typography.white100}`}
                 >

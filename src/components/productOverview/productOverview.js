@@ -52,17 +52,17 @@ function ProductOverview(props) {
             <source
               className={classes.image}
               media="(max-width: 760px)"
-              srcset={window.location.origin + `${imgSource.mobile}`}
+              srcSet={window.location.origin + `${imgSource.mobile}`}
             />
             <source
               className={classes.image}
               media="(max-width: 1399px)"
-              srcset={window.location.origin + `${imgSource.tablet}`}
+              srcSet={window.location.origin + `${imgSource.tablet}`}
             />
             <source
               className={classes.image}
               media="(max-width: 3000px)"
-              srcset={window.location.origin + `${imgSource.desktop}`}
+              srcSet={window.location.origin + `${imgSource.desktop}`}
             />
             <img
               className={classes.image}
@@ -109,7 +109,7 @@ function ProductOverview(props) {
             <Link
               to={{
                 pathname:
-                  "/productdetails/ProductDetails/" + data[productID].id,
+                  "/product/" + data[productID].id,
               }}
               className={`${typography.link} ${typography.white100}`}
             >

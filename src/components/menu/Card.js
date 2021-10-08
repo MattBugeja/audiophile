@@ -4,7 +4,7 @@ import typography from "../../components/typography.module.css";
 
 function Card(props) {
   function refresh() {
-    window.location.href = `/categories/CategoriesListed/${props.id}`;
+    window.location.href = `/category/${props.id}`;
   }
 
   return (
@@ -15,7 +15,7 @@ function Card(props) {
 
       <Link
         to={{
-          pathname: "/categories/CategoriesListed/" + props.id,
+          pathname: "/category/" + props.id,
         }}
         className={`${typography.link} ${typography.black50} ${classes.shop}`}
         onClick={refresh}
